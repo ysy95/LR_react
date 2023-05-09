@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 
 /* 감싸는 박스 width 100% */
 section {
@@ -80,8 +78,27 @@ h2 {
   align-items: center;
 }
 
-.hidden {
+.hidden{
   display: none;
+}
+
+.orange{
+  color:var(--bg-color1);
+}
+
+/* 헤더 시작 */
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+header .hd_top {
+  height: 60px;
+}
+
+header .hd_top h1 a img {
+  width: 100%;
 }
 
 /* 헤더 시작 */
@@ -153,7 +170,7 @@ header .hd_bottom .hd_lnb ul li::after {
 
 header .hd_bottom .hd_lnb ul li:first-child::after, header .hd_bottom .hd_lnb ul li:nth-child(2)::after {
   top: 9px;
-  right: -25px;
+  right: -40px;
 }
 
 header .hd_bottom .hd_lnb ul li:nth-child(2)::after {
@@ -164,6 +181,116 @@ header .hd_bottom .hd_lnb ul li:last-child::after {
   display: none;
 }
 
+/*헤더 끝 푸터 시작*/
+
+footer {
+  background: var(--bg-color2);
+  margin-bottom: 80px;
+}
+
+footer section article:first-of-type {
+  padding-top: 25px;
+  justify-content: space-between;
+}
+
+footer section article:last-of-type {
+  border-bottom: 2px solid var(--bg-color1);
+  padding: 15px 0px;
+}
+
+footer section article h2 {
+  width: 80px;
+}
+
+footer section article img {
+  width: 100%;
+
+}
+
+footer .f_lnb ul {
+  border-top: 2px solid var(--bg-color1);
+  border-bottom: 2px solid var(--bg-color1);
+  justify-content: space-around;
+}
+
+footer .f_lnb ul li {
+  height: 40px;
+  line-height: 40px;
+  font-size: var(--t-size3);
+  position: relative;
+  font-weight: bold;
+}
+
+footer .f_lnb ul li::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: var(--t-color3);
+  top: 10px;
+  right: -40px;
+}
+
+footer .f_lnb ul li:last-child::after {
+  display: none;
+}
+
+footer section article:last-of-type p {
+  line-height: 20px;
+  font-size: var(--t-size3);
+}
+
+footer section article .ft_sns {
+  font-size: 25px;
+}
+
+footer section article .ft_sns i.fa-instagram {
+  padding-right: var(--b-margin2);
+}
+
+footer address {
+  font-style: normal;
+  line-height: 45px;
+  text-align: center;
+  font-size: var(--t-size3);
+}
+
+/* footer 끝 탑버튼 양식 */
+
+footer .chat_top {
+  width: 60px;
+  height: 120px;
+  background: var(--bg-color2);
+  position: fixed;
+  right: 20px;
+  bottom: 180px;
+  border-radius: 20px;
+}
+
+footer .chat_top a {
+  display: block;
+}
+
+footer .chat_top a svg {
+  display: block;
+  width: 40px;
+  padding: 5px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--bg-color1);
+  background: var(--t-color3);
+  line-height: 50px;
+  text-align: center;
+  margin: 7px auto;
+}
+
+footer .chat_top a .top_btn {
+  transform: rotate(-90deg);
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+}
 
 /* 내비게이션 서식 */
 #u_nav{
@@ -364,117 +491,4 @@ header .hd_bottom .hd_lnb ul li:last-child::after {
   color: var(--t-color3);
   border-radius: 15px;
   font-size: var(--t-size4);
-}
-
-
-/*헤더 끝 푸터 시작*/
-
-footer {
-  background: var(--bg-color2);
-  margin-top: 50px;
-  margin-bottom: 80px;
-}
-
-footer section article:first-of-type {
-  padding-top: 25px;
-  justify-content: space-between;
-}
-
-footer section article:last-of-type {
-  border-bottom: 2px solid var(--bg-color1);
-  padding: 15px 0px;
-}
-
-footer section article h2 {
-  width: 80px;
-}
-
-footer section article img {
-  width: 100%;
-
-}
-
-footer .f_lnb ul {
-  border-top: 2px solid var(--bg-color1);
-  border-bottom: 2px solid var(--bg-color1);
-  justify-content: space-around;
-}
-
-footer .f_lnb ul li {
-  height: 40px;
-  line-height: 40px;
-  font-size: var(--t-size3);
-  position: relative;
-  font-weight: bold;
-}
-
-footer .f_lnb ul li::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  width: 2px;
-  height: 20px;
-  background: var(--t-color3);
-  top: 10px;
-  right: -40px;
-}
-
-footer .f_lnb ul li:last-child::after {
-  display: none;
-}d
-
-footer section article:last-of-type p {
-  line-height: 20px;
-  font-size: var(--t-size3);
-}
-
-footer section article .ft_sns {
-  font-size: 25px;
-}
-
-footer section article .ft_sns i.fa-instagram {
-  padding-right: var(--b-margin2);
-}
-
-footer address {
-  font-style: normal;
-  line-height: 45px;
-  text-align: center;
-  font-size: var(--t-size3);
-}
-
-/* footer 끝 탑버튼 양식 */
-
-footer .chat_top {
-  width: 60px;
-  height: 120px;
-  background: var(--bg-color2);
-  position: fixed;
-  right: 20px;
-  bottom: 180px;
-  border-radius: 20px;
-}
-
-footer .chat_top a {
-  display: block;
-}
-
-footer .chat_top a svg {
-  display: block;
-  width: 40px;
-  padding: 5px;
-  height: 40px;
-  border-radius: 50%;
-  color: var(--bg-color1);
-  background: var(--t-color3);
-  line-height: 50px;
-  text-align: center;
-  margin: 7px auto;
-}
-
-footer .chat_top a .top_btn {
-  transform: rotate(-90deg);
-  width: 35px;
-  height: 35px;
-  padding: 7px;
 }

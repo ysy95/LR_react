@@ -1,16 +1,25 @@
-import React from 'react';
-import Purchase from './components/nav/Purchase';
-// import Cart from './components/nav/Cart';
+import './App.css';
+
+import './components/css/u_common.css';
+
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 
-
+// import ErrorPage from './components/ErrorPage';
 
 function App() {
- 
   return (
     <>
-      <Purchase/>
-      {/* <Cart/> */}
+      <Header />
+      {/* routes */}
+
+      <Main />
+      {/* <ErrorPage /> */}
+
+      {/* routes */}
+      <Footer />
     </>
   );
 }
