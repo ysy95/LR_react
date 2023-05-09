@@ -1,0 +1,53 @@
+.c_title{
+  text-align: center;
+  font-size: 24px;
+  padding: 50px;
+  font-weight: bold;
+}
+label{
+  display: flex;
+}
+.classlist{
+  padding: 18px;
+  box-sizing: border-box;
+  width:390px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: var(--b-radius1);
+  display: flex;
+  justify-content: space-around;
+}
+.c_txt{
+  color: #000;
+  margin-left: var(--b-margin1);
+  line-height: 20px;
+}
+
+
+input[type="checkbox"] + label{
+  line-height: 30px;
+  color: #555;
+}
+input[type="checkbox"]{
+  transform: translateX(-10px);
+  border-radius: 50%;
+  appearance: none;
+  background: #d9d9d9;
+  width: 20px;height: 20px;
+  accent-color: var(--bg-color1);
+  cursor: pointer;
+  transition: 0.3;
+} 
+input[type="checkbox"]:checked::after {
+  display: inline-block;
+  content: '√';
+  width: 20px;height: 20px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50%;
+  background: var(--bg-color1);
+  color: #fff;
+  
+}
