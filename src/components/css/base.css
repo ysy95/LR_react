@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-style: normal;
+} 
+
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular';
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  color: #fff;
+  background: #000;
+}
+
+:root {
+  /* 언어 폰트 */
+  --kor: 'Pretendard-Regular';
+  --eng: 'Inter';
+
+    /* 배경 색상 */
+  --bg-color1: #F77F00;
+  --bg-color2: #414140;
+  --bg-color3: #A0A0A0;
+  --bg-color4: #D6D6D6;
+
+    /* 글자 색상 */
+  --t-color1: #000;  
+  --t-color2: #F77F00; 
+  --t-color3: #fff; 
+
+    /* 글자 크기 */
+  --t-size1: 16px;
+  --t-size2: 18px;
+  --t-size3: 12px;
+  --t-size4: 10px;
+
+    /* 기본 마진 */
+  --b-margin1: 15px;
+  --b-margin2: 10px;
+  --b-margin3: 30px;
+
+    /* 보더 래디우스 공통 */
+  --b-radius1: 8px;
+
+}
