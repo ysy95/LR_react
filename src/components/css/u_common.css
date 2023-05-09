@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* 감싸는 박스 width 100% */
 section {
   width: 100%;
@@ -163,6 +164,209 @@ header .hd_bottom .hd_lnb ul li:last-child::after {
   display: none;
 }
 
+
+/* 내비게이션 서식 */
+#u_nav{
+  width:100%;
+  height:80px;
+  position: fixed;
+  z-index: 9999;
+  bottom:0;
+  left:0;
+  background-color: var(--t-color3);
+}
+.nav_lnb{
+  padding:20px 20px 0px 20px;
+  justify-content: space-between;
+}
+.nav_lnb > li > a{
+  display: block;
+  height:80px;
+  color:var(--t-color1);
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+}
+.nav_lnb svg{
+  width:30px;
+  height:30px;
+  font-size: 30px;
+  text-align: center;
+}
+.nav_lnb p{
+  margin-top: 5px;
+  font-size: var(--t-size3);
+  text-align: center;
+}
+
+/* 내비게이션 토글 */
+#burger{
+  height:28px;
+  display:grid;
+  align-content: center;
+  cursor: pointer;
+}
+#burger span{
+  background-color: var(--t-color1);
+  width:28px;
+  height:2px;
+  transition:0.3s;
+  border-radius: 35px;
+}
+#burger span:not(#burger span:first-child){
+  margin-top:8px;
+}
+
+/* 내비게이션 체크서식 */
+/* #m_gnb:checked ~ #u_nav .nav_lnb #burger span
+{
+  background-color: var(--bg-color1);
+} */
+
+/* 아이콘 색상변경 */
+/* #m_search:checked + #u_nav .nav_lnb #n_scope{
+  color:var(--bg-color1);
+}
+#m_gnb:checked ~ #u_nav .nav_lnb #burger .burger1{
+  transform: rotate(45deg);
+  margin-top:10px;
+}
+#m_gnb:checked ~ #u_nav .nav_lnb #burger .burger2{
+  transform: rotate(-45deg);
+  margin-top:-2px;
+}
+#m_gnb:checked ~ #u_nav .nav_lnb #burger .burger3{
+  transform: scale(0);
+} */
+
+/* gnb서식 */
+#gnb_wrap,
+#search_form
+{
+  background-color: rgb(000, 000, 000, 0.9);
+  width:100%;
+  height:calc(100vh - 180px);
+}
+#gnb_wrap > strong{
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top:50px;
+}
+#gnb_wrap ul{
+  margin-top:15px;
+  width:100%;
+  flex-wrap: wrap;
+}
+#gnb_wrap ul > li{
+  margin-top:15px;
+  width:33.3%;
+  text-align: center;
+  border-bottom: 1px solid var(--t-color3);
+}
+#gnb_wrap ul > li > a span{
+  display: block;
+}
+#gnb_wrap ul > li > a span:first-child{
+  font-size: var(--t-size1);
+  font-weight: bold;
+}
+#gnb_wrap ul > li > a span:nth-child(2){
+  margin:15px 0px;
+  font-size: var(--t-size3);
+}
+.n_contact > li{
+  padding-bottom:15px;
+  font-weight: bold;
+}
+.hi_white,
+.hip_white
+{
+  position: relative;
+}
+.hi_white > img{
+  width:80px;
+  height:80px;
+  position: absolute;
+  top:-18px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.n_con{
+  transform: translateX(-20px);
+}
+.hip_white{
+  left:40px;
+}
+.hip_white > img{
+  width:50px;
+  height:50px;
+  position: absolute;
+  top:-8px;
+  left:-40px;
+  transform: rotate(180deg);
+}
+
+/* 검색폼 서식 */
+#search_form{
+  background-size: cover;
+}
+#search_form > strong{
+  display: block;
+  text-align: center;
+  padding-top:150px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.s_form{
+  margin:0px 15px;
+  margin-top:100px;
+  height:50px;
+  box-shadow:0 0 0 3px var(--bg-color1) inset;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: var(--t-color1);
+}
+.s_form input[type=text]{
+  width:90%;
+  height:50px;
+  line-height: 50px;
+  background-color: transparent;
+  border: none;
+  text-indent: 20px;
+  outline: none;
+}
+.s_form i{
+  line-height: 50px;
+  font-size: 30px;
+  color:var(--bg-color1);
+}
+.hot_key{
+  flex-wrap: wrap;
+  margin:30px 15px 0px;
+  padding:15px;
+  background-color: var(--t-color3);
+  border-radius: 8px;
+}
+.hot_key dt{
+  width:100%;
+  display: block;
+  color: var(--t-color1);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom:10px;
+}
+.hot_key dd{
+  padding:10px;
+  margin:5px;
+  background-color: var(--t-color1);
+  color: var(--t-color3);
+  border-radius: 15px;
+  font-size: var(--t-size4);
+}
+
+
 /*헤더 끝 푸터 시작*/
 
 footer {
@@ -215,9 +419,9 @@ footer .f_lnb ul li::after {
   right: -40px;
 }
 
-footer .f_lnb ul li-last:last-child::after {
+footer .f_lnb ul li:last-child::after {
   display: none;
-}
+}d
 
 footer section article:last-of-type p {
   line-height: 20px;

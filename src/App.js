@@ -1,5 +1,6 @@
 import React from 'react';
-import Cart from './components/nav/Cart';
+import Purchase from './components/nav/Purchase';
+// import Cart from './components/nav/Cart';
 
 
 
@@ -8,7 +9,8 @@ function App() {
  
   return (
     <>
-      <Cart/>
+      <Purchase/>
+      {/* <Cart/> */}
     </>
   );
 }
