@@ -1,10 +1,16 @@
 import React from 'react';
 
+import '../css/class.css';
+
+import ClassList from './class/ClassList';
+
 function Class(props) {
   return (
-    <div>
-      
-    </div>
+    <section>
+      {/* routes */}
+      <ClassList />
+      {/* routes */}
+    </section>
   );
 }
 
