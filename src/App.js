@@ -1,7 +1,5 @@
 import './App.css';
 
-import './components/css/u_common.css';
-
 import Header from './components/Header';
 // import Main from './components/Main';
 import Footer from './components/Footer';
@@ -12,6 +10,7 @@ import Nav from './components/Nav';
 // import Gnb from './components/nav/Gnb';
 import Class from './components/main/Class';
 
+import './components/css/u_common.css';
 
 // import ErrorPage from './components/ErrorPage';
 

@@ -465,6 +465,7 @@ footer .chat_top a .top_btn {
   text-indent: 20px;
   outline: none;
 }
+
 .s_form span{
   display: block;
   padding-top: 10px;
@@ -474,6 +475,13 @@ footer .chat_top a .top_btn {
   color:var(--bg-color1);
 }
 /* 인기검색어 서식 */
+
+.s_form i{
+  line-height: 50px;
+  font-size: 30px;
+  color:var(--bg-color1);
+}
+
 .hot_key{
   flex-wrap: wrap;
   margin:30px 15px 0px;
@@ -481,6 +489,7 @@ footer .chat_top a .top_btn {
   background-color: var(--t-color3);
   border-radius: 8px;
 }
+
 .hot_key dt,
 .hot_key dt a
 {
@@ -491,6 +500,13 @@ footer .chat_top a .top_btn {
   font-weight: bold;
 }
 .hot_key dt a{
+=======
+.hot_key dt{
+  width:100%;
+  display: block;
+  color: var(--t-color1);
+  text-align: center;
+  font-weight: bold;
   margin-bottom:10px;
 }
 .hot_key dd{
@@ -500,6 +516,7 @@ footer .chat_top a .top_btn {
   color: var(--t-color3);
   border-radius: 15px;
   font-size: var(--t-size4);
+
 }
 
 /* 검색결과 서식 */
@@ -538,4 +555,5 @@ footer .chat_top a .top_btn {
   font-size: var(--t-size3);
   font-weight: bold;
   padding-bottom:5px;
+
 }

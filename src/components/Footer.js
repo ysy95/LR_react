@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
@@ -58,5 +59,7 @@ function Footer(props) {
   </footer>
   );
 }
+
+
 
 export default Footer;
