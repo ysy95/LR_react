@@ -1,1 +1,92 @@
 @charset "utf-8";
+
+
+/* 나의 강의실 보기 */
+
+#myclass_view {
+  margin-top: 50px;
+}
+
+#myclass_view article h3 {
+  font-size: var(--t-size1);
+}
+
+#myclass_view article h3 span {
+  color: var(--bg-color2);
+  margin-right: 15px;
+}
+
+#myclass_view article:first-of-type h3 {
+  border-bottom: 1px solid var(--bg-color1);
+  padding-bottom: var(--b-margin2);
+}
+
+#myclass_view .mycinfo_wrap {
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#myclass_view .mycinfo_const .my_const {
+  margin-right: 35px;
+}
+
+
+#myclass_view .mycinfo_const .my_const img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#myclass_view .mycinfo_const .my_const p {
+  color: var(--bg-color1);
+  line-height: 18px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail {
+  width: 210px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail div {
+  justify-content: space-between;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail p {
+  line-height: 24px;
+  font-size: 12px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail p:first-child {
+  color: var(--bg-color3);
+}
+
+#myclass_view .myclass_cont {
+  margin-top: 15px;
+  border-top: 1px solid var(--bg-color1);
+  padding-top: 15px;
+}
+
+#myclass_view .myclass_cont h3 {
+  font-size: var(--t-size2);
+  color: var(--bg-color1);
+}
+
+#myclass_view .myclass_cont .myclass_cond {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#myclass_view .myclass_cont div {
+  align-items: center;
+}
+
+#myclass_view .myclass_cont .myclass_desc {
+  font-size: var(--t-size3);
+  line-height: 20px;
+}
+
+
