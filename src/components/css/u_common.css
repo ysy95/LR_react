@@ -247,7 +247,7 @@ footer address {
 
 footer .chat_top {
   width: 60px;
-  height: 120px;
+  height: 100px;
   background: var(--bg-color2);
   position: fixed;
   right: 20px;
@@ -262,9 +262,9 @@ footer .chat_top a {
 
 footer .chat_top a svg {
   display: block;
-  width: 40px;
+  width: 30px;
   padding: 5px;
-  height: 40px;
+  height: 30px;
   border-radius: 50%;
   color: var(--bg-color1);
   background: var(--t-color3);
@@ -275,9 +275,6 @@ footer .chat_top a svg {
 
 footer .chat_top a .top_btn {
   transform: rotate(-90deg);
-  width: 35px;
-  height: 35px;
-  padding: 7px;
 }
 
 /* 내비게이션 서식 */
