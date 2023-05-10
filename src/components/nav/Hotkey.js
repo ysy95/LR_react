@@ -3,7 +3,7 @@ import React from 'react';
 function Hotkey(props) {
   return (
     <dl class='hot_key flex'>
-      <dt><a href="#none">인기 검색어</a></dt>
+      <dt><a href="#none">{props.title}</a></dt>
       <dd><a href="#none">#모니카쌤</a></dd>
       <dd><a href="#none">#립제이쌤</a></dd>
       <dd><a href="#none">#뉴진스</a></dd>

@@ -97,7 +97,214 @@
   line-height: 24px;
 }
 
+/* 마이페이지 최근본 강의 */ 
+
+.myclass_recc {
+  margin-bottom: 50px;
+}
+
+/* 버튼 + 아이콘 서식 */
+
+.my_btn svg {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* 마이 챌린지 서식 */
+.chall_box {
+  flex-wrap: wrap;
+}
+
+.chall_box img {
+  display: block;
+  width: 130px;
+  height: 130px;
+}
+
+.hot_key {
+  margin-top: 50px;
+}
+
+/* 마이페이지 qna */
+
+#qna_list article h3 {
+  font-size: var(--t-size1);
+  margin: 15px 0px 30px 0px;
+}
+
+#qna_list .qna_title {
+  justify-content: space-between;
+}
+
+#qna_list .qna_title a {
+  padding-right: 15px;
+  display: block;
+  position: relative;
+  color: var(--bg-color1);
+}
+
+#qna_list .qna_title a svg {
+  position: absolute;
+  right: 0px;
+}
+
+#qna_list .qnaview_wrap {
+  margin: 15px 0px 10px 0px;
+  width: 100%;
+  background: var(--t-color3);
+  color: var(--t-color1);
+  border-radius: 8px;
+}
+
+#qna_list .qnaview_wrap a:first-of-type {
+  color: var(--t-color1);
+  display: block;
+  text-indent: 15px;
+  font-weight: bold;
+  line-height: 50px;
+  position: relative;
+}
+
+.qnaview_wrap .plus_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+#qna_list .qnaview_wrap div {
+  font-size: var(--t-size3);
+}
+
+#qna_list .qnaview_wrap .qna_col {
+  color: var(--bg-color1);
+}
+#qna_list .qnaview_wrap .qna_top {
+  justify-content: center;
+  background: var(--bg-color4);
+  line-height: 35px;
+}
+
+#qna_list .qnaview_wrap .qna_top div {
+  padding: 0px 10px;
+}
+
+#qna_list .qnaview_wrap .qna_top .qna_col {
+  font-weight: bold;
+}
+
+#qna_list .qnaview_wrap .qna_top div:last-child {
+  font-weight: bold;
+}
+
+#qna_list .qnaview_wrap .qna_cont {
+  height: 85px;
+  line-height: 24px;
+}
+
+#qna_list .qnaview_wrap .qna_cont p, #qna_list .qnaview_wrap .reply_cont p {
+  text-indent: 15px;
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+#qna_list .qnaview_wrap .reply_view {
+  background: var(--bg-color4);
+  line-height: 35px;
+  color: var(--bg-color1);
+  justify-content: center;
+}
+
+#qna_list .qnaview_wrap .reply_view div:first-child {
+  width: 65%;
+  font-weight: bold;
+}
+
+#qna_list .qnaview_wrap .reply_view div:last-child {
+  font-weight: normal;
+  color: var(--t-color1);
+  padding-left: 15px;
+}
 
 
+#qna_list .qnaview_wrap .reply_cont {
+  height: 85px;
+  line-height: 24px;
+}
 
 
+/* 문의글 등록 */
+
+#qna_write article h3 {
+  font-size: var(--t-size1);
+  margin: 15px 0px 30px 0px;
+}
+
+
+.qnawirte_wrap {
+  width: 100%;
+  padding: 30px 0px;
+  border-radius: 8px;
+  background: var(--t-color3);
+  color: var(--t-color1);
+  margin-bottom: 50px;
+}
+
+.qnawirte_wrap form div {
+  padding-bottom: 20px;
+}
+
+.qnawirte_wrap form div label {
+  padding-right: 15px;
+  padding-left: 5px;
+}
+
+.qnawirte_wrap form div input[type=radio] { 
+  vertical-align: middle;
+  appearance: none;
+  background: var(--bg-color4);
+  border: 1px solid var(--bg-color4);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  transition: .3s;
+}
+
+.qnawirte_wrap form div input[type=radio]:checked {
+  background: var(--bg-color1);
+  border: 1px solid var(--bg-color1);
+}
+
+.qnawirte_wrap form input[type=text], .qnawirte_wrap form textarea {
+  background: var(--bg-color4);
+  border: none;
+  text-indent: 10px;
+  display: block;
+  width: 91.6%;
+  margin: 0px auto;
+}
+
+.qnawirte_wrap form input[type=text] {
+  line-height: 40px;
+}
+
+.qnawirte_wrap form textarea  {
+  height: 245px;
+  margin: 15px auto 30px auto;
+  padding-top: 10px;
+}
+
+.qnawirte_wrap form button {
+  width: 91.6%;
+  display: block;
+  margin: 0px auto;
+  border: none;
+  line-height: 50px;
+  color: #fff;
+  background: var(--bg-color1);
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: var(--t-size1);
+}
