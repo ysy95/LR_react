@@ -499,8 +499,7 @@ footer .chat_top a .top_btn {
   text-align: center;
   font-weight: bold;
 }
-.hot_key dt a{
-=======
+
 .hot_key dt{
   width:100%;
   display: block;
@@ -530,10 +529,13 @@ footer .chat_top a .top_btn {
 
 /* 검색결과 카드 서식 */
 .cards{
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin:15px 15px;
   gap: 10px;
+}
+.cards li{
+  width:48%;
 }
 .r_card{
   padding:10px 15px;
@@ -542,7 +544,21 @@ footer .chat_top a .top_btn {
   width:100%;
   background-color: var(--t-color3);
 }
+.lev_tag{
+  width:40px;
+  height:20px;
+  line-height: 20px;
+  box-shadow: 0 0 0 1px var(--bg-color1) inset;
+  background-color: var(--t-color1);
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(-10px, -5px);
+  color:orange;
+  font-size: 8px;
+}
 .r_card img{
+  margin:0 auto;
   border-radius: var(--b-radius1);
   object-fit: cover;
 }

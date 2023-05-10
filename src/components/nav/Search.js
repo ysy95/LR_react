@@ -14,7 +14,7 @@ function Search(props) {
         검색어를 입력해 보세요!
       </strong>
       <SearchForm />
-      <Hotkey />
+      <Hotkey title='인기 검색어' />
     </div>
   );
 }

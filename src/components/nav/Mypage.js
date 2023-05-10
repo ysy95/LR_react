@@ -1,10 +1,14 @@
 import React from 'react';
 
+import '../css/myclass.css';
+
+import MypageClassList from './mypage/MypageClassList';
+
 function Mypage(props) {
   return (
-    <div>
-      
-    </div>
+    <section>
+      <MypageClassList />
+    </section>
   );
 }
 
