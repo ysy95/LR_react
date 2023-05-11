@@ -11,7 +11,7 @@ function MypageQnaView(props) {
     <div className='qnaview_wrap'>
       <form name='qna'>
       <label htmlFor="qna_view">
-      <a title='문의글 제목'>Q. 남병규는 앞으로 몇번의 제모를?
+      <a href='./' title='문의글 제목'>Q. 남병규는 앞으로 몇번의 제모를?
       <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
       </a>
       </label>
