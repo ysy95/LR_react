@@ -33,24 +33,14 @@
 .bubble:nth-child(2n+1)::after{
   position: absolute;
   top:40%;
-<<<<<<< Updated upstream
-  left:-12%;
-=======
   left:-5%;
->>>>>>> Stashed changes
   content:'';
   display: block;
   width: 0px;
   height: 0px;
-<<<<<<< Updated upstream
-  border-bottom: 15px solid var(--bg-color1);
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-=======
   border-bottom: 5px solid var(--bg-color1);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
->>>>>>> Stashed changes
   transform: rotate( -90deg );
 }
 .bubble:nth-child(2n){
@@ -58,25 +48,13 @@
   left:30%;
   background-color: var(--t-color3);
   color:var(--bg-color1);
-<<<<<<< Updated upstream
-=======
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
->>>>>>> Stashed changes
 }
 .bubble:nth-child(2n) p::before{
   position: absolute;
   top:40%;
-<<<<<<< Updated upstream
-  right:-12%;
-  content:'';
-  width: 0px;
-  height: 0px;
-  border-bottom: 15px solid var(--bg-color1);
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-=======
   right:-5%;
   content:'';
   width: 0px;
@@ -84,6 +62,5 @@
   border-bottom: 5px solid var(--bg-color1);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
->>>>>>> Stashed changes
   transform: rotate( 90deg );
 }
