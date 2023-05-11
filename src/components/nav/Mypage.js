@@ -10,10 +10,15 @@ import MypageClass from './mypage/MypageClass';
 import MypageQnaList from './mypage/MypageQnaList';
 
 
+import '../css/myclass.css';
+
+import MypageClassList from './mypage/MypageClassList';
+
 function Mypage(props) {
   return (
-    <div>
+  <div>
     <MypageClass />
+    <MypageClassList />
     <MypageQnaList/>
   </div>
   );

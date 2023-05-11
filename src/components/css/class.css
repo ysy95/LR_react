@@ -1,9 +1,76 @@
 @charset "utf-8";
 
+.slide_list > h2{
+  margin:50px 0 30px;
+}
+/* 스와이퍼슬라이드 */
+.mySwiper{
+  text-align: center;
+}
+/* 클래스리스트 컨텐츠 카드-설명 */
+.list_cont .cards{
+  margin:0px;
+}
+.c_desc{
+  color:var(--t-color1);
+  font-size: var(--t-size3);
+}
+/* 클래스 강의 하단부 버튼서식 */
+.list_btn{
+  align-items: center;
+  margin-top:20px;
+}
+.list_btn svg{
+  width:25px;
+  height:25px;;
+  color:var(--bg-color1);
+  margin-right:15px;
+}
+.list_btn > button{
+  width:110px;
+  height:40px;
+  background-color: var(--bg-color1);
+  color:var(--t-color3);
+  border:none;
+  border-radius: var(--b-radius1);
+  font-size: var(--t-size4);
+}
+/* 클래스 컨텐츠 탭메뉴서식 */
+.list_tab{
+  margin:40px 0px 10px;
+  padding:10px 0px;
+  border-bottom:1px solid var(--bg-color1);
+  justify-content: space-between;
+  align-items: center;
+}
+.list_tab > strong{
+  font-size: 24px;
+  font-weight: bold;
+}
+/* 클래스 컨텐츠 셀렉트옵션 서식 */
+.list_op{
+  font-size: var(--t-size1);
+}
+.list_op > li{
+  padding:0px 15px;
+}
+.list_op > li:not(:last-child){
+  border-right:1px solid var(--bg-color2);
+}
+.select_wrap{
+  text-align: end;
+  margin-bottom:10px;
+}
+.list_select{
+  width:75px;
+  height:30px;
+  border-radius: var(--b-radius1);
+  font-weight: bold;
+}
+/* 상세보기 서식 */
 #class_view {
   margin-top: 50px;
 }
-
 #class_view article h3 {
   font-size: var(--t-size1);
 }
@@ -41,7 +108,6 @@
   text-align: center;
   padding-top: 10px;
 }
-
 #class_view .cinfo_wrap .cinfo_detail {
   width: 210px;
 }

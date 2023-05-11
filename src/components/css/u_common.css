@@ -476,4 +476,61 @@ footer .chat_top a .top_btn {
   color: var(--t-color3);
   border-radius: 15px;
   font-size: var(--t-size4);
+
+}
+
+/* 검색결과 서식 */
+.s_result > strong{
+  display: block;
+  margin:30px 0px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 검색결과 카드 서식 */
+.cards{
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin:15px 15px;
+  gap: 10px;
+}
+.cards li{
+  width:48%;
+}
+.r_card{
+  padding:10px 15px;
+  border-radius: var(--b-radius1);
+  flex-direction: column;
+  width:100%;
+  background-color: var(--t-color3);
+}
+.lev_tag{
+  width:40px;
+  height:20px;
+  line-height: 20px;
+  box-shadow: 0 0 0 1px var(--bg-color1) inset;
+  background-color: var(--t-color1);
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(-10px, -5px);
+  color:orange;
+  font-size: 8px;
+}
+.r_card img{
+  margin:0 auto;
+  border-radius: var(--b-radius1);
+  object-fit: cover;
+}
+.r_card strong{
+  color:var(--t-color1);
+  font-weight: bold;
+  padding:15px 0px 5px;
+}
+.r_card p{
+  font-size: var(--t-size3);
+  font-weight: bold;
+  padding-bottom:5px;
+
 }
