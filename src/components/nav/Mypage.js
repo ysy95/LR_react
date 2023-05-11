@@ -7,14 +7,14 @@ import MypageClass from './mypage/MypageClass';
 // import MypageChallenge from './mypage/MypageChallenge';
 // import MypageTab from './mypage/MypageTab';
 // import Hotkey from './Hotkey';
-import MypageQnaWrite from './mypage/MypageQnaWrite';
+import MypageQnaList from './mypage/MypageQnaList';
 
 
 function Mypage(props) {
   return (
     <div>
     <MypageClass />
-    <MypageQnaWrite />
+    <MypageQnaList/>
   </div>
   );
 }

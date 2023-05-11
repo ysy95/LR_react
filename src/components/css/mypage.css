@@ -158,6 +158,17 @@
   border-radius: 8px;
 }
 
+#qna_list .qnaview_wrap .qnaview_box {
+  overflow: hidden;
+  height: 0px;
+  transition: .3s;
+}
+
+#qna_list .qnaview_wrap #qna_view:checked ~ .qnaview_box {
+  transition: 0.3s;
+  height: 100%;
+}
+
 #qna_list .qnaview_wrap a:first-of-type {
   color: var(--t-color1);
   display: block;

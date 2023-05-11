@@ -1,14 +1,13 @@
 import React from 'react';
 import './css/main.css';
+import './css/mypage.css';
 import Mypage from './nav/Mypage';
-import Register from './main/Register';
-import MypageUpdate from './nav/mypage/MypageUpdate';
 
 
 function Main(props) {
   return (
     <div>
-      <MypageUpdate />
+      <Mypage />
     </div>
   );
 }
