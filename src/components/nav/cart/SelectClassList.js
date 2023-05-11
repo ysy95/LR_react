@@ -4,6 +4,7 @@ import React from 'react';
 function SelectClassList() {
   return (
     <>
+      <h2 className='c_title'>장바구니</h2>
       <article className='classlist'>
         <div>
           <label for='cart_chk1'>

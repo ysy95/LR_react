@@ -3,8 +3,9 @@ import './App.css';
 import './components/css/u_common.css';
 
 import Header from './components/Header';
-import Main from './components/Main';
+// import Main from './components/Main';
 import Footer from './components/Footer';
+import Purchase from './components/nav/cart/Purchase';
 
 
 // import ErrorPage from './components/ErrorPage';
@@ -15,7 +16,8 @@ function App() {
       <Header />
       {/* routes */}
 
-      <Main />
+      <Purchase/>
+      {/* <Main /> */}
       {/* <ErrorPage /> */}
 
       {/* routes */}

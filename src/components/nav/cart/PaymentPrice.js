@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/cart.css';
+// import '../../css/cart.css';
 
 function PaymentPrice() {
   return (
