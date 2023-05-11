@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 function Footer(props) {
@@ -36,10 +37,11 @@ function Footer(props) {
         </h2>
         <div className="ft_sns">
           <a href="#none" title="인스타로 이동">
-          <i className="fa-brands fa-instagram"></i>
+        <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+
           </a>
           <a href="#none" title="유투브로 이동">
-          <i className="fa-brands fa-youtube"></i>
+        <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
       </article>
@@ -59,7 +61,5 @@ function Footer(props) {
   </footer>
   );
 }
-
-
 
 export default Footer;

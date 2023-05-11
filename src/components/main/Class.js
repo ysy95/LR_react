@@ -1,16 +1,16 @@
 import React from 'react';
-
 import '../css/class.css';
-
-import ClassList from './class/ClassList';
+import ClassView from './class/ClassView';
+import ClassViewRelated from './class/ClassViewRelated';
+import QnaMove from './qna/QnaMove';
 
 function Class(props) {
   return (
-    <section>
-      {/* routes */}
-      <ClassList />
-      {/* routes */}
-    </section>
+    <div>
+      <ClassView />
+      <ClassViewRelated />
+      <QnaMove />
+    </div>
   );
 }
 
