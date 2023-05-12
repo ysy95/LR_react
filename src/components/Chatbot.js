@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import './css/Chatbot.css';
 
@@ -43,17 +43,26 @@ const Chatbot = () => {
     setInputValue('');
   };
 
+  const chatlogRef = useRef(null);
+
+  useEffect(() => {
+    const chatlogContainer = chatlogRef.current;
+    if (chatlogContainer) {
+      chatlogContainer.scrollTop = chatlogContainer.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <article className='chatbot'>
+      <div id="chatlog" ref={chatlogRef} className='chatlog flex'>
       <h2>챗봇</h2>
-      <div id="chatlog" className='chatlog flex'>
         {messages.map((message, index) => (
           <div key={index} className='bubble'>
               <p>{message.sender} : {message.message}</p>
           </div>
         ))}
       </div>
-      <form onSubmit={sendMessage}>
+      <form onSubmit={sendMessage} className='chat_form flex'>
         <input
           type="text"
           placeholder="질문을 입력해주세요."
