@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../css/class.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import ClassViewRelated from './ClassViewRelated';
 
 function ClassView(props) {
   return (
@@ -79,6 +79,7 @@ function ClassView(props) {
       <button className='c_btn'>장바구니</button>
       </div>
     </article>
+    <ClassViewRelated />
     </section>
 
   );

@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Gnb(props) {
-  
   return (
     <>
     <div id='gnb_wrap'>
@@ -37,10 +37,10 @@ function Gnb(props) {
         </a>
       </li>
       <li>
-        <a href="#none">
+        <Link to='/mypage/challenge' title='challenge'>
           <span>Challenge</span>
           <span>챌린지</span>
-        </a>
+        </Link>
       </li>
     </ul>
     <strong className='orange'>Class</strong>
@@ -52,10 +52,10 @@ function Gnb(props) {
         </a>
       </li>
       <li>
-        <a href="#none">
+        <Link to='/class' title='class'>
           <span>Contents</span>
           <span>컨텐츠</span>
-        </a>
+        </Link>
       </li>
       <li>
         <a href="#none">
@@ -64,22 +64,22 @@ function Gnb(props) {
         </a>
       </li>
       <li>
-        <a href="#none">
+        <Link to='/class' title='class'>
           <span>Genre</span>
           <span>장르</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#none">
+        <Link to='/class' title='class'>
           <span>Level</span>
           <span>레벨</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#none">
+        <Link to='/class' title='class'>
           <span>Artist</span>
           <span>아티스트</span>
-        </a>
+        </Link>
       </li>
     </ul>
     <strong className='n_con'>
@@ -91,9 +91,9 @@ function Gnb(props) {
     </strong>
     <ul className='n_contact flex'>
       <li>
-        <a href="#none">
+        <Link to='/qna' title='qna'>
           1:1 문의
-        </a>
+        </Link>
       </li>
       <li>
         <a href="#none">

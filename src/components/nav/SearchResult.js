@@ -9,7 +9,7 @@ function SearchResult(props) {
     <div className='s_result'>
       <strong>검색 결과</strong>
       <SearchForm top='0' />
-      <Hotkey />
+      <Hotkey title='인기 검색어' />
       <ResultCards />
     </div>
   );

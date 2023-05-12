@@ -1,14 +1,12 @@
 import React ,{useState} from 'react';
-
-import ClassConts from './ClassConts';
-import '../../css/class.css';
-
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+import { Link } from 'react-router-dom';
 
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { EffectCards } from "swiper";
+import ClassConts from './ClassConts';
 
 function ClassList(props) {
 
@@ -36,9 +34,9 @@ function ClassList(props) {
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img1 } alt="" /></SwiperSlide>
-        <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img2 } alt="" /></SwiperSlide>
-        <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img3 } alt="" /></SwiperSlide>
+        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img1 } alt="" /></Link></SwiperSlide>
+        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img2 } alt="" /></Link></SwiperSlide>
+        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img3 } alt="" /></Link></SwiperSlide>
       </Swiper>
       </article>
       <article className='list_cont'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import '../css/cart.css';
 
 function SelectClassList() {
@@ -8,7 +9,9 @@ function SelectClassList() {
         <div>
           <label for='cart_chk1'>
             <input type='checkbox' id='cart_chk1'/>
-            <img src={`${process.env.PUBLIC_URL}/images/teacher.png`}  alt="강사사진" />
+            <Link to='/class/view'>
+              <img src={`${process.env.PUBLIC_URL}/images/main/teacher.png`}  alt="강사사진" />
+            </Link>
           </label>
         </div>
 

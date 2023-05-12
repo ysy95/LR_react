@@ -14,6 +14,9 @@ import Class from './components/main/Class';
 import Login from './components/main/Login';
 import Register from './components/main/Register';
 import Mypage from './components/nav/Mypage';
+import Gnb from './components/nav/Gnb';
+import Search from './components/nav/Search';
+import Cart from './components/nav/Cart';
 
 import Chatbot from './components/Chatbot';
 import ErrorPage from './components/ErrorPage';
@@ -25,11 +28,14 @@ function App() {
         <Header />
         <Routes>
 
-          <Route path='/class' element={<Main />} />
-          <Route path='/' element={<Class />} />
+          <Route path='/' element={<Main />} />
+          <Route path='/class/*' element={<Class />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/mypage' element={<Mypage />} />
+          <Route path='/mypage/*' element={<Mypage />} />
+          <Route path='/gnb' element={<Gnb />} />
+          <Route path='/search/*' element={<Search />} />
+          <Route path='/cart' element={<Cart />} />
 
 
           <Route path='/chat' element={<Chatbot />} />

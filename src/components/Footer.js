@@ -4,15 +4,16 @@ import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 
 function Footer(props) {
   return (
     <footer>
     <div className="chat_top">
-    <a href="chatbot.php" title="챗봇">
+    <Link to='/chat' title="챗봇">
     <FontAwesomeIcon icon={faRobot} className='chatbot'></FontAwesomeIcon>
-    </a>
+    </Link>
 
     <a href="#none"  title="최상단으로 이동" className="top_btn">
     <FontAwesomeIcon icon={faPlay} className='top_btn'></FontAwesomeIcon>
@@ -31,9 +32,9 @@ function Footer(props) {
       <h2 className="hidden">푸터</h2>
       <article className="flex">
         <h2>
-          <a href="u_main.php" title="메인으로 이동">
+          <Link to='/' title="메인으로 이동">
           <img src={`${process.env.PUBLIC_URL}/images/u_common/logo.png`}  alt="로고 이미지" />
-          </a>
+          </Link>
         </h2>
         <div className="ft_sns">
           <a href="#none" title="인스타로 이동">
