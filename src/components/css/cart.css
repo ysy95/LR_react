@@ -1,12 +1,15 @@
+
 .c_title{
   text-align: center;
   font-size: 24px;
   padding: 50px;
   font-weight: bold;
 }
+
 label{
   display: flex;
 }
+
 .classlist{
   padding: 18px;
   box-sizing: border-box;
@@ -25,6 +28,7 @@ label{
 .c_title2{
   font-size: var(--t-size1);
   font-weight: bold;
+  color: var(--t-color1);
   margin-top: var(--b-margin2);
 }
 .class_level{
@@ -77,7 +81,6 @@ input[type="checkbox"]:checked::after {
   font-size: var(--t-size1);
 }
 .payment_con{
-  height: 290px;
   background-color: #fff;
   color: var(--t-color1);
   margin-top: 30px;
@@ -87,7 +90,7 @@ input[type="checkbox"]:checked::after {
 .p_title{
   font-weight: bold;
   font-size: var(--t-size1);
-  margin-bottom: var(--b-margin1);
+  margin: 0px 0px var(--b-margin1) 0px;
 }
 .p_price{
   padding-bottom: var(--b-margin1);
@@ -111,9 +114,15 @@ input[type="checkbox"]:checked::after {
 
 
 /* 구매내역 */
-h2{text-align: center;}
-.payment_list, .payment_com{
-  height: 100px;
+h2{text-align: center;
+margin: 50px 0px 30px 0px;
+font-weight: bold;}
+
+.payment_t {
+  margin-bottom: 20px;
+}
+
+.payment_list, .payment_com {
   background-color: #fff;
   border-radius: var(--b-radius1);
 }
@@ -123,28 +132,86 @@ h2{text-align: center;}
 .payment_list caption{display: none;}
 .payment_list table{
   color: var(--t-color1);
-  width: 80%;height: 80%;
   margin: var(--b-margin3) auto;
   text-align: center;
+}
+
+.payment_list table thead th {
+  padding: 15px 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--t-size3);
+}
+
+.payment_list table tbody td {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.payment_list table tbody td:nth-child(odd) {
+  color: var(--bg-color1);
 }
 
 h3{
   color: var(--t-color2);
   font-weight: bold;
-  padding-bottom: 10px;
-  margin-bottom: var(--b-margin2);
-  border-bottom: solid 1px #d6d6d6;
+
+
 }
+
 .payment_com{
   margin-bottom: var(--b-margin1);
   color: var(--t-color1);
-  padding: 10px 0px;
   text-indent: 15px;
   font-weight: bold;
   line-height: 20px;
 }
+
+.payment_com div:first-child {
+  width: 100%;
+  padding: 5px 0px;
+  justify-content: space-between;
+  border-bottom: solid 1px #d6d6d6;
+}
+
+.payment_com div:nth-child(2) {
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  font-size: var(--t-size3);
+
+}
+
+.payment_com a svg {
+  color: var(--bg-color4);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.payment_com div:nth-child(2) p {
+  padding: 10px 0px 5px 0px;
+  font-weight: bold;
+}
+
+.payment_com a {
+  position: relative;
+  padding-right: 20px;
+}
+
 .payment_com a, .payment_com span{
   color: var(--t-color1);
-  float: right;
-  transform: translateX(-15px);
+  font-size: var(--t-size3);
+}
+
+.payment_com p:last-child {
+  text-align: right;
+  padding-right: 10px;
+  font-size: var(--t-size3);
+  padding-bottom: 15px;
+  color: var(--bg-color2);
+  font-weight: bold;
 }
