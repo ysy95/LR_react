@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .slide_list{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .slide_list > h2{
   margin:50px 0 30px;
@@ -21,6 +21,7 @@
 }
 /* 클래스 강의 하단부 버튼서식 */
 .list_btn{
+  justify-content: space-between;
   align-items: center;
   margin-top:20px;
 }

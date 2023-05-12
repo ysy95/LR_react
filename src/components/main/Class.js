@@ -1,17 +1,20 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import '../css/class.css';
-import ClassView from './class/ClassView';
 import ClassList from './class/ClassList';
-import ClassViewRelated from './class/ClassViewRelated';
-import QnaMove from './qna/QnaMove';
+import ClassView from './class/ClassView';
+
 
 function Class(props) {
   return (
     <div>
-      <ClassView />
-      <ClassList />
-      <ClassViewRelated />
-      <QnaMove />
+        <Routes>
+          
+          <Route path='/' element={<ClassList />} />
+          <Route path='view' element={<ClassView />} />
+
+        </Routes>
     </div>
   );
 }

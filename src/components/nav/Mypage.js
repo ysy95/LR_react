@@ -12,6 +12,7 @@ import MypageReceipt from './mypage/MypageReceipt';
 import MypageQnaList from './mypage/MypageQnaList';
 import MypageQnaWrite from './mypage/MypageQnaWrite';
 
+import '../css/cart.css'
 
 function Mypage(props) {
   return (

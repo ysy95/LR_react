@@ -71,6 +71,10 @@ h2 {
   margin: 5px auto 0px auto;
 }
 
+.orange{
+  color:var(--bg-color1);
+}
+
 .flex {
   display: flex;
 }
@@ -449,8 +453,8 @@ footer .chat_top a .top_btn {
   text-indent: 20px;
   outline: none;
 }
-.s_form i{
-  line-height: 50px;
+.s_form svg{
+  padding-top:10px;
   font-size: 30px;
   color:var(--bg-color1);
 }

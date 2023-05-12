@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../css/class.css';
 import ClassViewRelatedView from './ClassViewRelatedView';
 
 function ClassViewRelated(props) {
