@@ -1,64 +1,62 @@
-
-import {React,useState,useEffect} from 'react';
-import ReactPlayer from 'react-player'; // ReactPlayer import 추가
 import React from 'react';
+// import {useState, useEffect} from 'react';
+// import ReactPlayer from 'react-player'; // ReactPlayer import 추가
 import './css/main.css';
 import './css/mypage.css';
-import Mypage from './nav/Mypage';
 
 
 function Main(props) {
 
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [selectedSmallImageIndex, setSelectedSmallImageIndex] = useState(0);
-  const [showButton1, setShowButton1] = useState(false);
-  const [showButton2, setShowButton2] = useState(false);
-  const [showButton3, setShowButton3] = useState(false);
-  const [selectedImageDescription, setSelectedImageDescription] = useState('');
+  // const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  // const [selectedSmallImageIndex, setSelectedSmallImageIndex] = useState(0);
+  // const [showButton1, setShowButton1] = useState(false);
+  // const [showButton2, setShowButton2] = useState(false);
+  // const [showButton3, setShowButton3] = useState(false);
+  // const [selectedImageDescription, setSelectedImageDescription] = useState('');
 
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-    setShowButton1(false);
-    setShowButton2(false);
-    setShowButton3(false);
+  // const handleImageClick = (index) => {
+  //   setSelectedImageIndex(index);
+  //   setShowButton1(false);
+  //   setShowButton2(false);
+  //   setShowButton3(false);
 
-    if (index === 0) {
-      setShowButton1(true);
-    } else if (index === 1) {
-      setShowButton2(true);
-    } else if (index === 2) {
-      setShowButton3(true);
-    }
+  //   if (index === 0) {
+  //     setShowButton1(true);
+  //   } else if (index === 1) {
+  //     setShowButton2(true);
+  //   } else if (index === 2) {
+  //     setShowButton3(true);
+  //   }
     
-  };
+  // };
 
-  const handleSmallImageClick = (index) => {
-    setSelectedSmallImageIndex(index);
-    setSelectedImageIndex(index);
-    setSelectedImageDescription(`이미지${index + 1}에 대한 설명`);
-  };
+  // const handleSmallImageClick = (index) => {
+  //   setSelectedSmallImageIndex(index);
+  //   setSelectedImageIndex(index);
+  //   setSelectedImageDescription(`이미지${index + 1}에 대한 설명`);
+  // };
   
-  useEffect(() => {
-    setShowButton1(false);
-    setShowButton2(false);
-    setShowButton3(false);
+  // useEffect(() => {
+  //   setShowButton1(false);
+  //   setShowButton2(false);
+  //   setShowButton3(false);
 
-    if (selectedImageIndex === 0) {
-      setShowButton1(true);
-    } else if (selectedImageIndex === 1) {
-      setShowButton2(true);
-    } else if (selectedImageIndex === 2) {
-      setShowButton3(true);
-    }
-  }, [selectedImageIndex]);
+  //   if (selectedImageIndex === 0) {
+  //     setShowButton1(true);
+  //   } else if (selectedImageIndex === 1) {
+  //     setShowButton2(true);
+  //   } else if (selectedImageIndex === 2) {
+  //     setShowButton3(true);
+  //   }
+  // }, [selectedImageIndex]);
 
 
   return (
 
     <>
-      <section className='videos'>
+      {/* <section className='videos'>
         {/* 영상 */}
-          <ReactPlayer
+          {/* <ReactPlayer
           url={process.env.PUBLIC_URL + '/videos/main/monika.mp4'}
           playing={true}
           muted={true}
@@ -68,14 +66,14 @@ function Main(props) {
       </section>
         {/* instructor */}
 
-          <article>
+          {/* <article>
           <h2>instructor</h2>
           <p>OFD studio의 인기강의를 만나 보세요!</p>
-          </article>
+          </article> */}
 
 
      {/* 이미지 */}
-    <article>
+    {/* <article>
       <ul className='img_wrap'>
     <li className="small-image-container">
   <img
@@ -90,8 +88,8 @@ function Main(props) {
   </li>  
 
 <li className="small-image-container">
-  <img
-    className={selectedSmallImageIndex === 1 ? 'active' : ''}
+  <img */}
+    {/* className={selectedSmallImageIndex === 1 ? 'active' : ''}
     src={process.env.PUBLIC_URL + `/images/main/img2.jpg`}
     onClick={() => handleSmallImageClick(1)}
   />
@@ -103,8 +101,8 @@ function Main(props) {
 
 
 <li className="small-image-container">
-  <img
-    className={selectedSmallImageIndex === 2 ? 'active' : ''}
+  <img */}
+    {/* className={selectedSmallImageIndex === 2 ? 'active' : ''}
     src={process.env.PUBLIC_URL + `/images/main/img3.jpg`}
     onClick={() => handleSmallImageClick(2)}
   />
@@ -113,9 +111,9 @@ function Main(props) {
     <div className="image-description">이미지3에 대한 설명</div>
   )}
   </li>
-</ul>
+</ul> */}
 
-{/* 큰이미지 */}
+{/* 큰이미지
 <div className="big-image">
   <img src={process.env.PUBLIC_URL + `/images/main/bimg${selectedImageIndex + 1}.jpg`} alt={`큰이미지${selectedImageIndex + 1}`} />
 
@@ -147,14 +145,14 @@ function Main(props) {
 
         {/* 이벤트 챌린지 */}
         
-      <div>
+      {/* <div>
         <h2>Event & Challenge</h2>
         <p>당신의 댄스 재능을 뽐내 보세요</p>
       </div>
 
       <section>
         {/* 인트로 화면 챌린지 */}
-        <article className='event_back'>
+        {/* <article className='event_back'>
           <h3>DANCE BATTLE</h3>
 
           <div className='white_hi'>
@@ -176,9 +174,9 @@ function Main(props) {
 
               <div>S</div>
             </div>
-          </article>
+          </article> */}
             {/* 들어오는 엉덩이 */}
-            
+{/*             
           <article className='in_back'>
             <h3>DANCE BATTLE</h3>
             <a href='#' title='챌린지 바로가기'>
@@ -194,13 +192,10 @@ function Main(props) {
               <div>S</div>
             </div>
           </article>
-        </section>
+        </section> */} 
     </>
 
-  return (
-    <div>
-    <Mypage />
-    </div>
+
 
   );
 }

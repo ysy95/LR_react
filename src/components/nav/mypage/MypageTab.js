@@ -1,5 +1,8 @@
 import React from 'react';
+import  { Link } from 'react-router-dom';
 import '../../css/myclass.css';
+import MypageChallenge from './MypageChallenge';
+import MypageWrap from './MypageWrap';
 // import MypageClassRecent from './MypageClassRecent';
 
 function MypageTab(props) {
@@ -13,13 +16,15 @@ function MypageTab(props) {
         <article>
         <h3 className='hidden'>마이페이지 탭메뉴</h3>
         <div className='flex'>
-        <p>My</p>
+        <p>
+        My
+        </p>
         <ul className='flex'>
           <li>
-            <a href="#none" title='마이클래스'>Class</a>
+          <Link to='/mypage'>Class</Link>
           </li>
           <li>
-            <a href="#none" title='마이클래스'>challenge</a>
+          <Link to='/mypage/challenge'><span>Challenge</span></Link>
           </li>
         </ul>
         </div>
@@ -35,6 +40,8 @@ function MypageTab(props) {
         {/* </div>
         </article>
       </section>  */}
+
+
     </>
   );
 }

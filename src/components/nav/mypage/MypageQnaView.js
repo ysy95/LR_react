@@ -11,9 +11,8 @@ function MypageQnaView(props) {
     <div className='qnaview_wrap'>
       <form name='qna'>
       <label htmlFor="qna_view">
-      <a href='./' title='문의글 제목'>Q. 남병규는 앞으로 몇번의 제모를?
-      <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
-      </a>
+      <p>Q. 남병규는 앞으로 몇번의 제모를?
+      <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon></p>
       </label>
       <input type="checkbox" name="qna" id="qna_view" className='hidden'/>
       <div className='qnaview_box'>

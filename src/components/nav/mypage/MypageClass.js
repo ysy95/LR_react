@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,9 +18,9 @@ function MypageClass(props) {
       
       <div className="info_top flex">
         <p><span>ARRON</span>님</p>
-        <a href="joinmodify.php?id=">
+        <Link to='/update'>
         <FontAwesomeIcon icon={faGear} className='setting'></FontAwesomeIcon>
-        </a>
+        </Link>
       </div>
 
       <div className="info_bottom t_center flex">

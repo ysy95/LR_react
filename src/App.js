@@ -14,6 +14,7 @@ import Class from './components/main/Class';
 import Login from './components/main/Login';
 import Register from './components/main/Register';
 import Mypage from './components/nav/Mypage';
+import MypageUpdate from './components/nav/mypage/MypageUpdate';
 
 import Chatbot from './components/Chatbot';
 import ErrorPage from './components/ErrorPage';
@@ -29,8 +30,8 @@ function App() {
           <Route path='/' element={<Class />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/mypage' element={<Mypage />} />
-
+          <Route path='/mypage/*' element={<Mypage />} />
+          <Route path='/update' element={<MypageUpdate />} />
 
           <Route path='/chat' element={<Chatbot />} />
           <Route path='/*' element={<ErrorPage />} />

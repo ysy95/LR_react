@@ -6,7 +6,7 @@ function SelectClassList() {
     <>
       <article className='classlist'>
         <div>
-          <label for='cart_chk1'>
+          <label for='cart_chk1 flex'>
             <input type='checkbox' id='cart_chk1'/>
             <img src={`${process.env.PUBLIC_URL}/images/teacher.png`}  alt="강사사진" />
           </label>
