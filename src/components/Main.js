@@ -7,7 +7,7 @@ import Mypage from './nav/Mypage';
 function Main(props) {
   return (
     <div>
-      <Mypage />
+    <Mypage />
     </div>
   );
 }
