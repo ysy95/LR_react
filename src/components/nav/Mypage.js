@@ -6,11 +6,16 @@ import MypageClass from './mypage/MypageClass';
 import MypageReceipt from './mypage/MypageReceipt';
 
 
+import '../css/myclass.css';
+
+import MypageClassList from './mypage/MypageClassList';
+
 function Mypage(props) {
   return (
   <div>
     <MypageClass />
-    <MypageReceipt />
+    <MypageClassList />
+    <MypageQnaList/>
   </div>
   );
 }

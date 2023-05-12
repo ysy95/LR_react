@@ -1,6 +1,7 @@
 import React ,{useState} from 'react';
 
 import ClassConts from './ClassConts';
+import '../../css/class.css';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
