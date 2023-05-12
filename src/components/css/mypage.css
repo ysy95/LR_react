@@ -124,10 +124,6 @@
   height: 130px;
 }
 
-.hot_key {
-  margin-top: 50px;
-}
-
 /* 마이페이지 qna */
 
 #qna_list article h3 {
@@ -318,10 +314,6 @@
   border-radius: 8px;
   font-weight: bold;
   font-size: var(--t-size1);
-}
-
-.hot_key {
-  margin-top: 0
 }
 
 .my_btn:last-child {

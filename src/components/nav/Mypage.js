@@ -6,7 +6,7 @@ import '../css/cart.css';
 import '../css/u_qna.css';
 import MypageClass from './mypage/MypageClass';
 import MypageWrap from './mypage/MypageWrap';
-import MypageLikes from './mypage/MypageLikes';
+import MypageLikeslist from './mypage/MypageLikeslist';
 import MypageClassList from './mypage/MypageClassList';
 import MypageReceipt from './mypage/MypageReceipt';
 import MypageQnaList from './mypage/MypageQnaList';
@@ -20,7 +20,7 @@ function Mypage(props) {
     <MypageClass />
     <Routes>
     <Route path='/*' element={<MypageWrap />} />
-    <Route path='/mylikes' element={<MypageLikes/>} />
+    <Route path='/mylikes' element={<MypageLikeslist/>} />
     <Route path='/myclasslist' element={<MypageClassList />} />
     <Route path='/receipt' element={<MypageReceipt />} />
     <Route path='/qna' element={<MypageQnaList />} />

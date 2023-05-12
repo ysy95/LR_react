@@ -114,8 +114,8 @@ input[type="checkbox"]:checked::after {
 .payment_t {
   margin-bottom: 20px;
   text-align: center;
-margin: 50px 0px 30px 0px;
-font-weight: bold;
+  margin: 50px 0px 30px 0px;
+  font-weight: bold;
 }
 
 .payment_list, .payment_com {
@@ -213,4 +213,50 @@ font-weight: bold;
   padding-bottom: 15px;
   color: var(--bg-color2);
   font-weight: bold;
+}
+
+/* 찜한 강의 */ 
+
+.likes_list h2 {
+    margin-bottom: 20px; 
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+    font-weight: bold;
+}
+
+.likes_list article {
+  border-radius: 8px;
+  width: 100%;
+  background: #fff;
+  color: var(--t-color1);
+}
+
+.likes_list article ul {
+  padding: 15px 0px 15px 15px;
+}
+
+.likes_list article ul li {
+  padding-right: 15px;
+  position: relative;
+  color: var(--bg-color2);
+}
+
+.likes_list article ul li::after {
+  width: 3px;
+  height: 14px;
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+.likes_list article img {
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+  display: block;
+}
+
+.likes_list article .class_info {
+  justify-content: space-between;
+  width: ;
 }
