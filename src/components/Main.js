@@ -1,8 +1,14 @@
+
 import {React,useState,useEffect} from 'react';
 import ReactPlayer from 'react-player'; // ReactPlayer import 추가
+import React from 'react';
 import './css/main.css';
+import './css/mypage.css';
+import Mypage from './nav/Mypage';
+
 
 function Main(props) {
+
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedSmallImageIndex, setSelectedSmallImageIndex] = useState(0);
   const [showButton1, setShowButton1] = useState(false);
@@ -190,6 +196,12 @@ function Main(props) {
           </article>
         </section>
     </>
+
+  return (
+    <div>
+    <Mypage />
+    </div>
+
   );
 }
 

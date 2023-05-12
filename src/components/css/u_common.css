@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 
 /* 감싸는 박스 width 100% */
 section {
@@ -22,6 +24,7 @@ h2 {
 .c_btn {
   width: 110px;
   height: 40px;
+  border: none;
   background: var(--bg-color1);
   display: block;
   color: var(--t-color3);
@@ -32,9 +35,11 @@ h2 {
 }
 
 .q_btn {
+  border: none;
   width: 350px;
   line-height: 45px;
   border-radius: 8px;
+  color: var(--t-color3);
   text-align: center;
   display: block;
   background: var(--bg-color1);
@@ -63,6 +68,7 @@ h2 {
   position: relative;
   border: 1px solid var(--t-color3);
   border-radius: var(--b-radius1);
+  margin: 5px auto 0px auto;
 }
 
 .flex {
@@ -78,27 +84,8 @@ h2 {
   align-items: center;
 }
 
-.hidden{
+.hidden {
   display: none;
-}
-
-.orange{
-  color:var(--bg-color1);
-}
-
-/* 헤더 시작 */
-
-header {
-  width: 100%;
-  height: 100px;
-}
-
-header .hd_top {
-  height: 60px;
-}
-
-header .hd_top h1 a img {
-  width: 100%;
 }
 
 /* 헤더 시작 */
@@ -245,7 +232,7 @@ footer section article .ft_sns {
   font-size: 25px;
 }
 
-footer section article .ft_sns i.fa-instagram {
+footer section article .ft_sns svg {
   padding-right: var(--b-margin2);
 }
 
@@ -260,12 +247,13 @@ footer address {
 
 footer .chat_top {
   width: 60px;
-  height: 120px;
+  height: 100px;
   background: var(--bg-color2);
   position: fixed;
   right: 20px;
   bottom: 180px;
   border-radius: 20px;
+  z-index: 1;
 }
 
 footer .chat_top a {
@@ -274,9 +262,9 @@ footer .chat_top a {
 
 footer .chat_top a svg {
   display: block;
-  width: 40px;
+  width: 30px;
   padding: 5px;
-  height: 40px;
+  height: 30px;
   border-radius: 50%;
   color: var(--bg-color1);
   background: var(--t-color3);
@@ -287,9 +275,6 @@ footer .chat_top a svg {
 
 footer .chat_top a .top_btn {
   transform: rotate(-90deg);
-  width: 35px;
-  height: 35px;
-  padding: 7px;
 }
 
 /* 내비게이션 서식 */
@@ -476,7 +461,7 @@ footer .chat_top a .top_btn {
   background-color: var(--t-color3);
   border-radius: 8px;
 }
-.hot_key dt{
+.hot_key dt, .hot_key dt a {
   width:100%;
   display: block;
   color: var(--t-color1);
@@ -491,4 +476,61 @@ footer .chat_top a .top_btn {
   color: var(--t-color3);
   border-radius: 15px;
   font-size: var(--t-size4);
+
+}
+
+/* 검색결과 서식 */
+.s_result > strong{
+  display: block;
+  margin:30px 0px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 검색결과 카드 서식 */
+.cards{
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin:15px 15px;
+  gap: 10px;
+}
+.cards li{
+  width:48%;
+}
+.r_card{
+  padding:10px 15px;
+  border-radius: var(--b-radius1);
+  flex-direction: column;
+  width:100%;
+  background-color: var(--t-color3);
+}
+.lev_tag{
+  width:40px;
+  height:20px;
+  line-height: 20px;
+  box-shadow: 0 0 0 1px var(--bg-color1) inset;
+  background-color: var(--t-color1);
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(-10px, -5px);
+  color:orange;
+  font-size: 8px;
+}
+.r_card img{
+  margin:0 auto;
+  border-radius: var(--b-radius1);
+  object-fit: cover;
+}
+.r_card strong{
+  color:var(--t-color1);
+  font-weight: bold;
+  padding:15px 0px 5px;
+}
+.r_card p{
+  font-size: var(--t-size3);
+  font-weight: bold;
+  padding-bottom:5px;
+
 }

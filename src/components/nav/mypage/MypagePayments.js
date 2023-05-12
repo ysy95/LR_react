@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-function Payment() {
+function MypagePayments() {
   return (
     <>
-        <h2>구매내역</h2>
+      <h2 className='payment_t'>구매내역</h2>
       <article className='payment_list'>
         <table>
           <caption>구매내역</caption>
@@ -21,13 +21,9 @@ function Payment() {
         </table>
       </article>
 
-      <article className='payment_com'>
-        <h3>결제완료 <a href='#none'>상세보기 &gt;</a></h3>
-        <p>[모니카] <span>39,000</span></p>
-        <p><span>결제일 2023. 04. 05</span></p>
-      </article>
+  
     </>
   );
 }
 
-export default Payment;
+export default MypagePayments;

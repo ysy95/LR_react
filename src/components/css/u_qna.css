@@ -1,1 +1,10 @@
 @charset "utf-8";
+
+#qna_move {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+#qna_move h4 {
+  margin-bottom: 15px;
+}
