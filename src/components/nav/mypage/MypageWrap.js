@@ -10,7 +10,7 @@ function MypageWrap(props) {
     <MypageTab /> 
     <Routes>
     <Route path='/' element={<MypageClassRecent />} />
-    <Route path='/challenge' element={<MypageChallenge />} />
+    <Route path='/challenge' element={<MypageChallenge/>} />
     </Routes>
     </>
   );
