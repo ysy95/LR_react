@@ -12,9 +12,6 @@
   text-align: center;
 }
 /* 클래스리스트 컨텐츠 카드-설명 */
-.list_cont .cards{
-  margin:0px;
-}
 .c_desc{
   color:var(--t-color1);
   font-size: var(--t-size3);
@@ -42,7 +39,7 @@
 }
 /* 클래스 컨텐츠 탭메뉴서식 */
 .list_tab{
-  margin:40px 0px 10px;
+  margin:40px 0px 15px;
   padding:10px 0px;
   border-bottom:1px solid var(--bg-color1);
   justify-content: space-between;
