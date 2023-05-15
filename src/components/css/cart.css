@@ -6,10 +6,6 @@
   font-weight: bold;
 }
 
-label{
-  display: flex;
-}
-
 .classlist{
   padding: 18px;
   box-sizing: border-box;
@@ -114,12 +110,12 @@ input[type="checkbox"]:checked::after {
 
 
 /* 구매내역 */
-h2{text-align: center;
-margin: 50px 0px 30px 0px;
-font-weight: bold;}
 
 .payment_t {
   margin-bottom: 20px;
+  text-align: center;
+margin: 50px 0px 30px 0px;
+font-weight: bold;
 }
 
 .payment_list, .payment_com {
@@ -153,11 +149,9 @@ font-weight: bold;}
   color: var(--bg-color1);
 }
 
-h3{
+.payment_com h3{
   color: var(--t-color2);
   font-weight: bold;
-
-
 }
 
 .payment_com{
@@ -167,6 +161,11 @@ h3{
   font-weight: bold;
   line-height: 20px;
 }
+
+.payment_com:last-child {
+  margin-bottom: 50px;
+}
+
 
 .payment_com div:first-child {
   width: 100%;

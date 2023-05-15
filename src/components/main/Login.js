@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Login(props) {
   return (
@@ -20,7 +21,7 @@ function Login(props) {
                 <span>비밀번호 찾기</span>
               </p>
             </div>
-            <strong>아직 회원이 아니신가요?</strong>
+            <strong><Link to='/register'>아직 회원이 아니신가요?</Link></strong>
             <button className='log_btn'>로그인</button>
             <span className='log_kakao'>
               <img src={process.env.PUBLIC_URL + '/images/u_member/log_kakao.png'} alt="로그인" width='300' height='45' />

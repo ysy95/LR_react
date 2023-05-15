@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 
 function MypageButton(props) {
@@ -31,9 +32,18 @@ function MypageButton(props) {
   // ]
   return (
     <>
-    <a href="#none" title='페이지 이동' className='my_btn'>나의 강의 보러 가기
+    <Link to='/mypage/myclasslist'className='my_btn'>나의 강의 보러가기
     <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
-    </a>
+    </Link>
+    <Link to='/mypage/mylikes'className='my_btn'>찜한 강의 보러가기
+    <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
+    </Link>
+    <Link to='/mypage/receipt'className='my_btn'>구매 내역
+    <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
+    </Link>
+    <Link to='/mypage/qna'className='my_btn'>1:1문의
+    <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
+    </Link>
     </>
   );
 }
