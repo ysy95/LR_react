@@ -224,39 +224,91 @@ input[type="checkbox"]:checked::after {
     font-weight: bold;
 }
 
-.likes_list article {
+.likes_list .mylikes {
   border-radius: 8px;
   width: 100%;
   background: #fff;
   color: var(--t-color1);
+  height: 160px;
 }
 
-.likes_list article ul {
+.likes_list .mylikes ul {
   padding: 15px 0px 15px 15px;
 }
 
-.likes_list article ul li {
+.likes_list .mylikes ul li {
   padding-right: 15px;
   position: relative;
   color: var(--bg-color2);
 }
 
-.likes_list article ul li::after {
-  width: 3px;
-  height: 14px;
+.likes_list .mylikes ul li::after {
   content: '';
   display: inline-block;
   position: absolute;
+  width: 1px;
+  height: 14px;
+  right: 7px;
+  background: var(--bg-color2);
 }
 
-.likes_list article img {
+.likes_list .mylikes ul li:last-child:after {
+  display: none;
+}
+
+.likes_list .mylikes img {
   width: 100px;
   height: 100px;
   margin-left: 15px;
   display: block;
+  margin-bottom: var(--b-margin1);
 }
 
-.likes_list article .class_info {
+.likes_list .mylikes:last-child {
+  margin-bottom: 50px;
+}
+
+.likes_list .class_info {
   justify-content: space-between;
-  width: ;
+}
+
+.likes_list .class_info .class_infod {
+  width: 80%;
+  padding-left: 15px;
+}
+
+.likes_list .class_info .class_infod p {
+  font-weight: bold;
+}
+
+.likes_list .class_info .class_infod p:first-child {
+ font-size: var(--t-size1); 
+ margin-bottom: 10px;
+}
+
+.likes_list div:first-child {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes_list div:first-child svg {
+  display: block;
+  margin-right: 15px;
+  height: 20px;
+  width: 24px;
+  color: var(--bg-color1);
+}
+
+.likes_list .class_infod svg {
+  height: 20px;
+  width: 24px;
+  padding-right: 5px;
+}
+
+
+.likes_list .class_infod p:last-child {
+  color: var(--bg-color4);
+  margin-top: 10px;
+  align-items: center;
+  font-size: var(--t-size3);
 }
