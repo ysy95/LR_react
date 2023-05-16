@@ -196,7 +196,7 @@ function Main(props) {
           </label>
 
           {/* Contact Us */}
-          <section className='con_wrap'>
+          <section className='con_wrap'> 
             <h2>Contact Us</h2>
             <article>
 
