@@ -12,9 +12,17 @@
   text-align: center;
 }
 /* 클래스리스트 컨텐츠 카드-설명 */
+.class_price{
+  font-size: var(--t-size3);
+  font-weight: bold;
+  padding-bottom:5px;
+}
 .c_desc{
   color:var(--t-color1);
   font-size: var(--t-size3);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 클래스 강의 하단부 버튼서식 */
 .list_btn{
@@ -94,8 +102,8 @@
 }
 
 #class_view .cinfo_const .const {
-  margin-right: 15px;
-  padding-left: 35px;
+  padding-left:30px;
+  flex-direction: column;
 }
 #class_view .cinfo_const .const img {
   display: block;
