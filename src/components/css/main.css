@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 body{
   overflow-x: hidden;
@@ -175,7 +176,7 @@ video{
   top: 43%;
   left: 44%;
   
-  
+
 }
 .vs_po>span{
   font-weight: bold;
