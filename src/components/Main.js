@@ -1,5 +1,6 @@
-import {React,useState,useEffect} from 'react';
-import ReactPlayer from 'react-player'; // ReactPlayer import 추가
+import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
+import ReactPlayer from 'react-player';
 import './css/main.css';
 
 function Main(props) {
@@ -8,43 +9,42 @@ function Main(props) {
   const [showButton1, setShowButton1] = useState(false);
   const [showButton2, setShowButton2] = useState(false);
   const [showButton3, setShowButton3] = useState(false);
-  const [selectedImageDescription, setSelectedImageDescription] = useState('');
-
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-    setShowButton1(false);
-    setShowButton2(false);
-    setShowButton3(false);
-
-    if (index === 0) {
-      setShowButton1(true);
-    } else if (index === 1) {
-      setShowButton2(true);
-    } else if (index === 2) {
-      setShowButton3(true);
-    }
-    
-  };
+  const [showHip1, setShowHip1] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleSmallImageClick = (index) => {
-    setSelectedSmallImageIndex(index);
     setSelectedImageIndex(index);
-    setSelectedImageDescription(`이미지${index + 1}에 대한 설명`);
-  };
-  
-  useEffect(() => {
-    setShowButton1(false);
-    setShowButton2(false);
-    setShowButton3(false);
+    setSelectedSmallImageIndex(index);
 
-    if (selectedImageIndex === 0) {
-      setShowButton1(true);
-    } else if (selectedImageIndex === 1) {
-      setShowButton2(true);
-    } else if (selectedImageIndex === 2) {
-      setShowButton3(true);
-    }
+    setShowButton1(index === 0);
+    setShowButton2(index === 1);
+    setShowButton3(index === 2);
+  };
+
+  useEffect(() => {
+    setShowButton1(selectedImageIndex === 0);
+    setShowButton2(selectedImageIndex === 1);
+    setShowButton3(selectedImageIndex === 2);
   }, [selectedImageIndex]);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleClick1 = () => {
+    if (isChecked) {
+      setShowHip1(true);
+    } else {
+      setShowHip1(false);
+    }
+  };
+
+  const handleClick2 = () => {
+    if (isChecked) {
+      setShowHip1(false);
+    }
+  };
+
 
 
   return (
@@ -62,7 +62,7 @@ function Main(props) {
       </section>
         {/* instructor */}
 
-          <article>
+          <article className='ins_wrap'>
           <h2>instructor</h2>
           <p>OFD studio의 인기강의를 만나 보세요!</p>
           </article>
@@ -76,10 +76,11 @@ function Main(props) {
     className={selectedSmallImageIndex === 0 ? 'active' : ''}
     src={process.env.PUBLIC_URL + `/images/main/img1.jpg`}
     onClick={() => handleSmallImageClick(0)}
+    alt={'메인이미지1'}
   />
   
   {selectedSmallImageIndex === 0 && (
-    <div className="image-description">이미지1에 대한 설명</div>
+    <div className="image-description">K-DAY</div>
   )}
   </li>  
 
@@ -88,10 +89,11 @@ function Main(props) {
     className={selectedSmallImageIndex === 1 ? 'active' : ''}
     src={process.env.PUBLIC_URL + `/images/main/img2.jpg`}
     onClick={() => handleSmallImageClick(1)}
+    alt={'작은이미지'}
   />
   
   {selectedSmallImageIndex === 1 && (
-    <div className="image-description">이미지2에 대한 설명</div>
+    <div className="image-description">Lip-J</div>
   )}
   </li>
 
@@ -99,12 +101,12 @@ function Main(props) {
 <li className="small-image-container">
   <img
     className={selectedSmallImageIndex === 2 ? 'active' : ''}
-    src={process.env.PUBLIC_URL + `/images/main/img3.jpg`}
+    src={process.env.PUBLIC_URL + `/images/main/img3.jpg`} alt={'작은 이미지'}
     onClick={() => handleSmallImageClick(2)}
   />
   
   {selectedSmallImageIndex === 2 && (
-    <div className="image-description">이미지3에 대한 설명</div>
+    <div className="image-description">Monika</div>
   )}
   </li>
 </ul>
@@ -114,81 +116,107 @@ function Main(props) {
   <img src={process.env.PUBLIC_URL + `/images/main/bimg${selectedImageIndex + 1}.jpg`} alt={`큰이미지${selectedImageIndex + 1}`} />
 
   <div className='btn_wrap1'>
-  {showButton1 && <span className="button1">버튼1</span>}
-  {showButton1 && <span className="button1">버튼2</span>}
+  {showButton1 && <Link to='/class' title='K-DAY에 대해서' className="button1">About K-day</Link>}
+  {showButton1 && <Link to='/class' title='K-DAY 수업'className="button1">K-day Class</Link>}
   </div>
 
   <div className='btn_wrap2'>
-  {showButton2 && <span className="button2">버튼3</span>}
-  {showButton2 && <span className="button2">버튼4</span>}
+  {showButton2 && <Link to='/class' title='Lip-J에 대해서'className="button2">About Lip-J</Link>}
+  {showButton2 && <Link to='/class' title='Lip-J 수업'className="button2">Lip-J Class</Link>}
   </div>
 
   <div className='btn_wrap3'>
-  {showButton3 && <span className="button3">버튼5</span>}
-  {showButton3 && <span className="button3">버튼6</span>}
+  {showButton3 && <Link to='/class' title='Monika에 대해서'className="button3">About Monika</Link>}
+  {showButton3 && <Link to='/class' title='Monika 수업'className="button3">Monika Class</Link>}
   </div>
 
 </div>
 
     <div className='more_class'>
-      <a href='#' title='더 많은 강의 보러가기'>
+      <Link to='/class' title='더 많은 강의 보러가기'>
         더 많은 강의 보러가기
-      <img src='./images/main/Group.png' alt='화살표'/>
-      </a>
+      <img src={process.env.PUBLIC_URL+`/images/main/Group.png`} alt={'화살표'}/>
+      </Link>
     </div>
           </article>
 
 
         {/* 이벤트 챌린지 */}
         
-      <div>
-        <h2>Event & Challenge</h2>
+      <div className='event_tit'>
+        <h2><Link to ='/Mypage/challenge'>Event & Challenge</Link></h2>
         <p>당신의 댄스 재능을 뽐내 보세요</p>
       </div>
 
+      <label htmlfor='move'>
       <section>
         {/* 인트로 화면 챌린지 */}
         <article className='event_back'>
-          <h3>DANCE BATTLE</h3>
-
+        <input type='checkbox' checked={isChecked} onChange={handleCheckboxChange} id='move' />
           <div className='white_hi'>
-            <a href='#' title='챌린지바로가기'>
-            <img src='./images/main/Hi_white.gif' alt='하얀안녕'/>
-          </a>
+            <h3>DANCE BATTLE</h3>
+            <img src={process.env.PUBLIC_URL+`/images/main/Hi_white.gif`} alt={'하얀안녕'}/>
+          </div>
+            
+          <div className='white_hi2'>
+            <h3>CHALLENGE</h3>
+            <img src={process.env.PUBLIC_URL+`/images/main/Hi_white.gif`} alt={'하얀안녕2'}/>
+          </div>
+          
+          <div className='vs_po'>
+            <span>V</span>
+            <span>S</span>
+            </div>
+
+          
+          {/* 토글 엉덩이 */}
+          
+          <div className={`hip_wrap ${isChecked ? 'left50' : 'right50'}`}>
+
+            {/* 엉덩이1번 */}
+            <div className={`black_hip1 ${showHip1 ? 'active' : ''}`}onClick={handleClick1}>
+              <h3 className={`${isChecked ? 'hidden' : ''}`}>CHALLENGE</h3>
+                <img src={process.env.PUBLIC_URL+`/images/main/Hip_black.gif`} alt={'검은엉덩이'}/>
+                <span className={`move_txt1 ${isChecked ? 'hidden' : ''}`}>S</span>
+                <span className={`move_txt2 ${isChecked ? '' : 'hidden'}`}>V</span>
+            </div>
+
+          {/* 엉덩이2번 */}
+          <div className={`black_hip2 ${showHip1 ? 'active' : ''}`}onClick={handleClick2}>
+            <h3 className={`${isChecked ? '' : 'hidden'}`}>DANCEBATTLE</h3>
+
+            <img src={process.env.PUBLIC_URL+`/images/main/Hip_black.gif`} alt={'검은엉덩이2'}/>
+
           </div>
 
-          <div>V</div>
-
-            <div className='move_back'>
-              <h3>CHALLENGE</h3>
-              
-              <div className='black_hip'>
-                <a href='#' title='챌린지 바로가기'>
-                <img src='./images/main/Hip_black.gif' alt='검정엉덩이'/>
-                </a>
-              </div>
-
-              <div>S</div>
-            </div>
-          </article>
-            {/* 들어오는 엉덩이 */}
-            
-          <article className='in_back'>
-            <h3>DANCE BATTLE</h3>
-            <a href='#' title='챌린지 바로가기'>
-              <img src='./images/main/Hip_black.gif' alt='검은엉덩이'/>
-            </a>
-            <div>V</div>
-
-            <div className='move_back2'>
-              <h3>CHALLENGE</h3>
-              <a href='#' title='챌린지 바로가기'>
-                <img src='./images/main/Hi_white.gif' alt='하얀엉덩이'/>
-              </a>
-              <div>S</div>
-            </div>
-          </article>
+        </div>
+        
+      </article>
         </section>
+          </label>
+
+          {/* Contact Us */}
+          <section className='con_wrap'>
+            <h2>Contact Us</h2>
+            <article>
+
+              <div className='con con_moon'>
+                <Link to='/Mypage/qna' title='1:1문의하기'>1:1문의하기
+                </Link>
+                <img src={process.env.PUBLIC_URL+`/images/main/Group 928.png`} alt={'1:1문의'}/>
+                </div>
+
+                <div className='con con_pado'>
+                <a href='https://www.padoent.com/about' title='파도엔터' target='_blank' rel='noopener noreferrer'>Pado ENT.</a>
+                <img src={process.env.PUBLIC_URL+`/images/main/Group 929.png`} alt={'파도엔터'}/>
+                </div>
+
+                <div className='con con_osi'>
+                <Link to='/' title='오시는길'>오시는 길</Link>
+                <img src={process.env.PUBLIC_URL+`/images/main/Group 930.png`} alt={'오시는길'}/>
+                </div>
+            </article>
+          </section>
     </>
   );
 }
