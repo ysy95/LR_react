@@ -1,7 +1,7 @@
 import React from 'react';
 import ClassCont from './ClassCont';
 
-function ClassConts({memberclasslist, select, sortDate2, sortByLowPrice}) {
+function ClassConts({memberclasslist, select, sortDate2, sortByLowPrice, sortInst, sortLev, sortKind}) {
 
   return (
     <>
@@ -17,6 +17,21 @@ function ClassConts({memberclasslist, select, sortDate2, sortByLowPrice}) {
           </li>
           ):null}
           {select === "lowPrice" ? sortByLowPrice(memberclasslist).map(items =>
+          <li key={items.MC_num}>
+            <ClassCont id={items.MC_num} level={items.MC_level} title={items.MC_title} price={items.MC_price} desc={items.MC_desc} />
+          </li>
+          ):null}
+          {select === "강사" ? sortInst(memberclasslist).map(items =>
+          <li key={items.MC_num}>
+            <ClassCont id={items.MC_num} level={items.MC_level} title={items.MC_title} price={items.MC_price} desc={items.MC_desc} />
+          </li>
+          ):null}
+          {select === "레벨" ? sortLev(memberclasslist).map(items =>
+          <li key={items.MC_num}>
+            <ClassCont id={items.MC_num} level={items.MC_level} title={items.MC_title} price={items.MC_price} desc={items.MC_desc} />
+          </li>
+          ):null}
+          {select === "장르" ? sortKind(memberclasslist).map(items =>
           <li key={items.MC_num}>
             <ClassCont id={items.MC_num} level={items.MC_level} title={items.MC_title} price={items.MC_price} desc={items.MC_desc} />
           </li>

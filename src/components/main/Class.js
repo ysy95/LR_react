@@ -41,11 +41,26 @@ function sortByLowPrice(arr){
   return sortedArr;
 }
 
+function sortInst(arr){
+  return arr.sort((a, b) => a.MC_instructor.localeCompare(b.MC_instructor));
+}
+
+function sortLev(arr){
+  return arr.sort((a, b) => a.MC_level.localeCompare(b.MC_level));
+}
+
+function sortKind(arr){
+  return arr.sort((a, b) => a.MC_kind.localeCompare(b.MC_kind));
+}
+
+
+
+
   return (
     <div>
         <Routes>
           
-          <Route path='/' element={<ClassList memberclasslist={memberclasslist} select={select} setselect={setselect} sortDate2={sortDate2} sortByLowPrice={sortByLowPrice} />} />
+          <Route path='/' element={<ClassList memberclasslist={memberclasslist} select={select} setselect={setselect} sortDate2={sortDate2} sortByLowPrice={sortByLowPrice} sortInst={sortInst} sortLev={sortLev} sortKind={sortKind} />} />
           <Route path='view/:viewId' element={<ClassView memberclasslist={memberclasslist} />} />
           
 

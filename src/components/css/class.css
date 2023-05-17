@@ -64,6 +64,9 @@
 .list_op > li{
   padding:0px 15px;
 }
+.list_op > li > label{
+  cursor: pointer;
+}
 .list_op > li:not(:last-child){
   border-right:1px solid var(--bg-color2);
 }

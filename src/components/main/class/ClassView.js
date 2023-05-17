@@ -96,7 +96,7 @@ function ClassView({memberclasslist}) {
       <button className='c_btn'>장바구니</button>
       </div>
     </article>
-    <ClassViewRelated />
+    <ClassViewRelated memberclasslist={memberclasslist} level={findId.MC_level} kind={findId.MC_kind} />
     </section>
 
   );
