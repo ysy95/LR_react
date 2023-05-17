@@ -15,7 +15,7 @@ function SearchInput({searchInput, setsearchInput}) {
         검색어를 입력해 보세요!
       </strong>
       <SearchForm searchInput={searchInput} setsearchInput={setsearchInput} />
-      <Hotkey title='인기 검색어' margin='50' />
+      <Hotkey title='인기 검색어' margin='50' searchInput={searchInput} setsearchInput={setsearchInput} />
     </div>
   );
 }

@@ -10,7 +10,7 @@ function SearchResult({memberclasslist, searchInput, setsearchInput}) {
     <div className='s_result'>
       <strong>검색 결과</strong>
       <SearchForm top='0' searchInput={searchInput} setsearchInput={setsearchInput} />
-      <Hotkey title='인기 검색어' margin='50' />
+      <Hotkey title='인기 검색어' margin='50' searchInput={searchInput} setsearchInput={setsearchInput} />
 
       <ResultCards memberclasslist={memberclasslist} searchInput={searchInput} />
     </div>

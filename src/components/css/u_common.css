@@ -139,7 +139,8 @@ header .hd_bottom {
   background: var(--bg-color2);
   line-height: 40px;
   height: 40px;
-  border: 1px solid var(--bg-color1);
+  border-top: 1px solid var(--bg-color1);
+  border-bottom: 1px solid var(--bg-color1);
 }
 
 header .hd_bottom ul {

@@ -1,21 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function Hotkey(props) {
+function Hotkey({searchInput, setsearchInput, margin, title}) {
   let hotkey = {
-    marginTop : props.margin
+    marginTop : margin
   };
+
+  // 입력값을 가져와서 소문자로변경
+
+    // setsearchInput(e.target.value.toLowerCase());
+
   return (
     <dl class='hot_key flex' style={hotkey}>
-      <dt><Link to='/search/result'>{props.title}</Link></dt>
-      <dd><Link to='/search/result'>#모니카쌤</Link></dd>
-      <dd><Link to='/search/result'>#립제이쌤</Link></dd>
-      <dd><Link to='/search/result'>#뉴진스</Link></dd>
-      <dd><Link to='/search/result'>#아이브</Link></dd>
-      <dd><Link to='/search/result'>#부석순</Link></dd>
-      <dd><Link to='/search/result'>#무슨노래들으세요</Link></dd>
-      <dd><Link to='/search/result'>#Hypeboy</Link></dd>
-      <dd><Link to='/search/result'>#Move</Link></dd>
+      <dt><Link to='/search/result'>{title}</Link></dt>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("모니카")}>#모니카</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("runrun")}>#RUNRUN</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("꿈빛파티시엘")}>#꿈빛파티시엘</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("blackpink")}>#BLACKPINK</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("leejung")}>#리정</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("코레오그래피")}>#코레오그래피</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("hypeboy")}>#Hypeboy</Link></dd>
+      <dd><Link to='/search/result' onClick={() => setsearchInput("jammin")}>#잼민</Link></dd>
     </dl>
   );
 }
