@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import './css/main.css';
 
+
 function Main(props) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedSmallImageIndex, setSelectedSmallImageIndex] = useState(0);
@@ -217,6 +218,7 @@ function Main(props) {
                 </div>
             </article>
           </section>
+
     </>
   );
 }

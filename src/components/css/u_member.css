@@ -2,21 +2,30 @@
 
 /* 로그인서식 */
 .login_wrap{
-  margin:0 auto;
+  margin-bottom: 50px;
 }
-.l_form{
-  flex-direction: column;
-  margin-bottom:50px;
+
+.l_form {
+  width: 300px;
+  margin: 0px auto;
+  text-align: center;
 }
-.l_form legend{
+
+.login_wrap h2 {
   padding:50px 0px;
   font-size: 24px;
   text-align: center;
   font-weight: bold;
 }
+
+.l_form .input_box {
+  flex-direction: column;
+}
+
 .l_form input[type=text]{
   margin-bottom: 10px;
 }
+
 .l_form input[type=text],
 .l_form input[type=password]{
   min-width: 300px;
@@ -26,6 +35,7 @@
   color:var(--bg-color2);
   font-size: var(--t-size1);
 }
+
 .log_check{
   margin-top:5px;
   min-width:300px;
@@ -38,11 +48,14 @@
 .log_check span{
   padding:0px 5px;
 }
-.l_form > strong{
-  margin:50px 0 30px;
+
+.login_wrap strong {
+  display: block;
+  margin: 15px 0px 50px 0px;
   /* font-weight: bold; */
   text-decoration: underline;
 }
+
 .log_btn{
   background-color: var(--bg-color1);
   color:var(--t-color3);

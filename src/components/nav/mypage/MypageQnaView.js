@@ -6,8 +6,6 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 function MypageQnaView(props) {
   return (
     // php
-
-
     <div className='qnaview_wrap'>
       <form name='qna'>
       <label htmlFor="qna_view">
