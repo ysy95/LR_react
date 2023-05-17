@@ -15,14 +15,14 @@ import MypageQnaWrite from './mypage/MypageQnaWrite';
 
 import '../css/cart.css'
 
-function Mypage({setUserInfo, userInfo}) {
+function Mypage({setUserInfo, userInfo, zimList, setzimList, memberclasslist}) {
   
   return (
   <div>
     <MypageClass userInfo={userInfo} />
     <Routes>
     <Route path='/*' element={<MypageWrap userInfo={userInfo} />} />
-    <Route path='/mylikes' element={<MypageLikeslist userInfo={userInfo} />} />
+    <Route path='/mylikes' element={<MypageLikeslist userInfo={userInfo} zimList={zimList} setzimList={setzimList} memberclasslist={memberclasslist} />} />
     <Route path='/myclasslist' element={<MypageClassList userInfo={userInfo} />} />
     <Route path='/receipt' element={<MypageReceipt userInfo={userInfo} />} />
     <Route path='/qna' element={<MypageQnaList userInfo={userInfo} />} />

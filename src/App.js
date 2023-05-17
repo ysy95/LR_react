@@ -82,9 +82,24 @@ function App() {
   
 
   const [memberclasslist, setmemberClassList] = useState([]);
+  const [zimList, setzimList] = useState([]);
   const [searchInput, setsearchInput] = useState('');
 
   const classListPHP = 'http://jamm.dothome.co.kr/revolution_user/memberclasslist.php';
+  const zimListPHP = 'http://jamm.dothome.co.kr/revolution_user/zim.php';
+
+  const fetchzimList = async() => {
+    try { // 응답 성공
+      const response = await axios.get(zimListPHP);
+      setzimList(response.data.zim);
+      console.log(response);
+    } catch (e) { // 응답 실패
+      setError(e);
+      console.log(e +error);
+    }
+  }
+
+  console.log(zimList);
 
   const fetchClassList = async() => {
     try { // 응답 성공
@@ -99,6 +114,7 @@ function App() {
 
   useEffect(() => {
     fetchClassList();
+    fetchzimList();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -114,7 +130,7 @@ function App() {
           <Route path='/class/*' element={<Class memberclasslist={memberclasslist} />} />
           <Route path='/login' element={<Login loginInfo={loginInfo} setLoginInfo={setLoginInfo} />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/mypage/*' element={<Mypage loginInfo={loginInfo} setLoginInfo={setLoginInfo} qnalist={qnalist} setQnalist={setQnalist} adqnaList={adqnaList} setadqnaList={setadqnaList} />} />
+          <Route path='/mypage/*' element={<Mypage loginInfo={loginInfo} setLoginInfo={setLoginInfo} qnalist={qnalist} setQnalist={setQnalist} adqnaList={adqnaList} setadqnaList={setadqnaList} />} zimList={zimList} setzimList={setzimList} memberclasslist={memberclasslist} />
           <Route path='/update' element={<MypageUpdate />} />
           <Route path='/gnb' element={<Gnb />} />
           <Route path='/search/*' element={<Search memberclasslist={memberclasslist} searchInput={searchInput} setsearchInput={setsearchInput}/>} />
