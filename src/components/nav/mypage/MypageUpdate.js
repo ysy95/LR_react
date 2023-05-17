@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,14 +27,14 @@ function MypageUpdate({userInfo}) {
   
   const InputUpdate = (e) => {
     e.preventDefault();
-    if(pw != pw2) {
+    if(pw !== pw2) {
       return ;
     }
     const phpLink = 'http://jamm.dothome.co.kr/revolution_user/member_update_confirm.php';
     axios.post(phpLink, UpdateData)
     .then((response) => {
         console.log(response.data)
-        if(response.data.success == true) {
+        if(response.data.success === true) {
           alert('업데이트에 성공했습니다!')
           navigate('/mypage')
         } else {

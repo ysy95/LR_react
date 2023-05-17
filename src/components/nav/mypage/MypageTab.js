@@ -1,8 +1,8 @@
 import React from 'react';
 import  { Link } from 'react-router-dom';
 import '../../css/myclass.css';
-import MypageChallenge from './MypageChallenge';
-import MypageWrap from './MypageWrap';
+// import MypageChallenge from './MypageChallenge';
+// import MypageWrap from './MypageWrap';
 // import MypageClassRecent from './MypageClassRecent';
 
 function MypageTab(props) {

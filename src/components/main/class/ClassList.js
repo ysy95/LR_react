@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper";
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import "swiper/css/effect-cards";
 
 import ClassConts from './ClassConts';
 
-function ClassList(props) {
+function ClassList({memberclasslist, select, setselect, sortByLowPrice, sortDate2, sortInst, sortLev, sortKind}) {
 
   let Classnum = {
     img1:'class1.png',
@@ -16,12 +16,9 @@ function ClassList(props) {
     img3:'class3.png'
   }
 
-  const selectList = ["인기순", "찜많은순", "최신순"];
-  const [Selected, setSelected] = useState("");
-
-  const handleSelect = (e) => {
-    setSelected(e.target.value);
-  };
+  function handleChange(event){
+    setselect(event.target.value);
+  }
 
   return (
     <>
@@ -34,30 +31,43 @@ function ClassList(props) {
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img1 } alt="" /></Link></SwiperSlide>
-        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img2 } alt="" /></Link></SwiperSlide>
-        <SwiperSlide><Link to='/class/view'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img3 } alt="" /></Link></SwiperSlide>
+        <SwiperSlide><Link to='/class/view/2'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img1 } alt="" /></Link></SwiperSlide>
+        <SwiperSlide><Link to='/class/view/3'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img2 } alt="" /></Link></SwiperSlide>
+        <SwiperSlide><Link to='/class/view/4'><img src={process.env.PUBLIC_URL + '/images/class/'+ Classnum.img3 } alt="" /></Link></SwiperSlide>
       </Swiper>
       </article>
       <article className='list_cont'>
-        <p className='list_tab flex'>
+        <div className='list_tab flex'>
           <strong>CLASS</strong>
           <ul className='list_op flex'>
-            <li>강사</li>
-            <li>레벨</li>
-            <li>장르</li>
+            <li>
+              <input type="radio" name="tab" value="강사" checked={select === "강사"} onChange={handleChange} id='class_inst' className='hidden' />
+              <label htmlFor="class_inst">
+                강사
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="tab" value="레벨" checked={select === "레벨"} onChange={handleChange} id='class_lev' className='hidden' />
+              <label htmlFor="class_lev">
+                레벨
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="tab" value="장르" checked={select === "장르"} onChange={handleChange} id='class_kind' className='hidden' />
+              <label htmlFor="class_kind">
+                장르
+              </label>
+            </li>
           </ul>
-        </p>
+        </div>
         <p className='select_wrap'>
-        <select onChange={handleSelect} value={Selected} className='list_select'>
-          {selectList.map((item) => (
-            <option value={item} key={item}>
-              {item}
-            </option>
-          ))}
+        <select  onChange={handleChange} className='list_select'>
+          <option value="recently">최신순</option>
+          <option value="zim">찜 많은순</option>
+          <option value="lowPrice">낮은 가격순</option>
         </select>
         </p>
-        <ClassConts />
+        <ClassConts memberclasslist={memberclasslist} select={select} sortDate2={sortDate2} sortByLowPrice={sortByLowPrice} sortInst={sortInst} sortLev={sortLev} sortKind={sortKind} />
       </article>
     </>
   );

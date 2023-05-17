@@ -452,6 +452,7 @@ footer .chat_top a .top_btn {
   border: none;
   text-indent: 20px;
   outline: none;
+  color:var(--t-color3);
 }
 .s_form svg{
   padding-top:10px;
@@ -471,7 +472,7 @@ footer .chat_top a .top_btn {
   color: var(--t-color1);
   text-align: center;
   font-weight: bold;
-  margin-bottom:10px;
+  margin-bottom:5px;
 }
 .hot_key dd{
   padding:10px;
@@ -494,13 +495,13 @@ footer .chat_top a .top_btn {
 
 /* 검색결과 카드 서식 */
 .cards{
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  margin:15px 15px;
+  margin:15px 0px 50px;
   gap: 10px;
 }
 .cards li{
-  width:48%;
+  width:45%;
 }
 .r_card{
   padding:10px 15px;
@@ -531,6 +532,9 @@ footer .chat_top a .top_btn {
   color:var(--t-color1);
   font-weight: bold;
   padding:15px 0px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .r_card p{
   font-size: var(--t-size3);
