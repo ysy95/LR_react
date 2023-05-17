@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 import './css/Chatbot.css';
 
 const Chatbot = () => {
@@ -62,6 +61,7 @@ const Chatbot = () => {
     <article className='chatbot'>
       <div id="chatlog" ref={chatlogRef} className='chatlog flex'>
       <h2>챗봇</h2>
+
         {messages.map((message, index) => (
           <div key={index} className='bubble'>
               <p>{message.sender} : {message.message}</p>
