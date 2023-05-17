@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 
-function MypageClass(props) {
+function MypageClass({userInfo}) {
+
+  const users = localStorage.getItem('loginInfo');
+  const user = JSON.parse(users);
+  
   return (
     <div>
     <section id="my_class">
@@ -17,7 +21,9 @@ function MypageClass(props) {
     <div className="profile_info">
       
       <div className="info_top flex">
-        <p><span>ARRON</span>님</p>
+        <p>
+        <span>{user.name}</span>
+        </p>
         <Link to='/update'>
         <FontAwesomeIcon icon={faGear} className='setting'></FontAwesomeIcon>
         </Link>
