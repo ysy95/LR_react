@@ -1,7 +1,8 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 
 import './App.css';
 import './components/css/u_common.css';
@@ -24,11 +25,11 @@ import Cart from './components/nav/Cart';
 import Chatbot from './components/Chatbot';
 import ErrorPage from './components/ErrorPage';
 
+
 function App() {
   /* 유저 로그인, 정보 */
   const [userInfo, setUserInfo] = useState('');
   const [loginInfo, setLoginInfo] = useState(false);
-  const [qnalist, setQnalist] = useState([]);
   const [error, setError] = useState(null);
 
   const productListPHP = 'http://jamm.dothome.co.kr/revolution_user/answer.php';
@@ -71,6 +72,30 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
   
+
+  const [memberclasslist, setmemberClassList] = useState([]);
+  const [searchInput, setsearchInput] = useState('');
+
+  const classListPHP = 'http://jamm.dothome.co.kr/revolution_user/memberclasslist.php';
+
+  const fetchList = async() => {
+    try { // 응답 성공
+      const response = await axios.get(classListPHP);
+      setmemberClassList(response.data.memberclasslist);
+      console.log(response);
+    } catch (e) { // 응답 실패
+      setError(e);
+      console.log(e +error);
+    }
+  }
+
+  useEffect(() => {
+    fetchList();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+
   return (
     <>
       <BrowserRouter>
@@ -78,13 +103,13 @@ function App() {
         <Routes>
 
           <Route path='/' element={<Main userInfo={userInfo} />} />
-          <Route path='/class/*' element={<Class />} />
+          <Route path='/class/*' element={<Class memberclasslist={memberclasslist} />} />
           <Route path='/login' element={<Login loginInfo={loginInfo} setLoginInfo={setLoginInfo} />} />
           <Route path='/register' element={<Register />} />
           <Route path='/mypage/*' element={<Mypage loginInfo={loginInfo} setLoginInfo={setLoginInfo} />} />
           <Route path='/update' element={<MypageUpdate />} />
           <Route path='/gnb' element={<Gnb />} />
-          <Route path='/search/*' element={<Search />} />
+          <Route path='/search/*' element={<Search memberclasslist={memberclasslist} searchInput={searchInput} setsearchInput={setsearchInput}/>} />
           <Route path='/cart' element={<Cart />} />
 
 
