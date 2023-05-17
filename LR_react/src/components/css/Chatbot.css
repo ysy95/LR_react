@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.chatbot{
+  margin-top:15px;
+}
+#chatlog > h2{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:30px;
+  color: var(--bg-color2);
+}
+#chatlog{
+  background-color: var(--t-color3);
+  color:var(--t-color1);
+  width:100%;
+  height:40vh;
+  border-radius: var(--b-radius1);
+  padding:30px 15px;
+  line-height: 24px;
+  font-size: var(--t-size3);
+  flex-direction: column;
+  overflow-y:scroll;
+}
+.bubble{
+  width:70%;
+  box-shadow: 0 0 0 3px var(--bg-color1) inset;
+  border-radius: var(--b-radius1);
+  margin-bottom:10px;
+  padding:10px;
+}
+.bubble:nth-child(2n){
+  background-color: var(--bg-color1);
+  color:var(--t-color3);
+  position: relative;
+}
+.bubble:nth-child(2n)::after{
+  position: absolute;
+  top:40%;
+  left:-5%;
+  content:'';
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid var(--bg-color1);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: rotate( -90deg );
+}
+.bubble:nth-child(2n+1){
+  position: relative;
+  left:30%;
+  background-color: var(--t-color3);
+  color:var(--t-color1);
+}
+.bubble:nth-child(2n+1) p{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble:nth-child(2n+1) p::before{
+  position: absolute;
+  top:40%;
+  right:-5%;
+  content:'';
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid var(--bg-color1);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: rotate( 90deg );
+}
+
+.chat_form{
+  margin:5px 0px;
+  width:100%;
+  height:50px;
+}
+.chat_form > input{
+  border-radius: var(--b-radius1);
+  width:80%;
+  height:100%;
+  text-indent: 10px;
+}
+.chat_form > button{
+  width:20%;
+  height:100%;
+  border-radius: var(--b-radius1);
+  border:none;
+  background-color: var(--bg-color1);
+  color:var(--t-color3);
+}

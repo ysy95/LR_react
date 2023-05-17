@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* 마이페이지 나의 강의목록 서식 */
+.myclass_list > strong{
+  display:block;
+  margin:50px 0px 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.myclass_tab{
+  width:100%;
+  height:40px;
+  border-bottom: 1px solid var(--bg-color1);
+}
+.myclass_tab > li{
+  width:33.3%;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: var(--t-size1);
+}
+.myclass_tab > li:not(:last-child){
+  border-right:1px solid var(--bg-color2);
+}
+
+/* 강의목록 카드서식 */
+.class_ing{
+  margin:15px 0px;
+  padding:15px 10px;
+  border-radius: var(--b-radius1);
+  background-color: var(--t-color3);
+  color:var(--t-color1);
+}
+.class_ing > strong{
+  display: block;
+  font-weight: bold;
+  color:var(--bg-color1);
+  margin-bottom:5px;
+}
+.class_ing > p{
+  width:100%;
+  padding:5px 0px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.class_ing > p span.margin{
+  margin-left:20px;
+}
+/* 프로그래스바 서식 */
+.c_bar{
+  width:100%;
+  margin:10px 0;
+  height:15px;
+  border-radius: 5px;
+  background-color: var(--bg-color2);
+}
+.class_ing button{
+  width:120px;
+  height:35px;
+  border-radius: var(--b-radius1);
+  background-color: var(--bg-color1);
+  color:var(--t-color3);
+  border:none;
+  font-size: var(--t-size3);
+  font-weight: bold;
+}
+
+/* 나의 강의실 보기 */
+
+#myclass_view {
+  margin-top: 50px;
+}
+
+#myclass_view article h3 {
+  font-size: var(--t-size1);
+}
+
+#myclass_view article h3 span {
+  color: var(--bg-color2);
+  margin-right: 15px;
+}
+
+#myclass_view article:first-of-type h3 {
+  border-bottom: 1px solid var(--bg-color1);
+  padding-bottom: var(--b-margin2);
+}
+
+#myclass_view .mycinfo_wrap {
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#myclass_view .mycinfo_const .my_const {
+  margin-right: 35px;
+}
+
+
+#myclass_view .mycinfo_const .my_const img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#myclass_view .mycinfo_const .my_const p {
+  color: var(--bg-color1);
+  line-height: 18px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail {
+  width: 210px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail div {
+  justify-content: space-between;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail p {
+  line-height: 24px;
+  font-size: 12px;
+}
+
+#myclass_view .mycinfo_wrap .mycinfo_detail p:first-child {
+  color: var(--bg-color3);
+}
+
+#myclass_view .myclass_cont {
+  margin-top: 15px;
+  border-top: 1px solid var(--bg-color1);
+  padding-top: 15px;
+}
+
+#myclass_view .myclass_cont h3 {
+  font-size: var(--t-size2);
+  color: var(--bg-color1);
+}
+
+#myclass_view .myclass_cont .myclass_cond {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#myclass_view .myclass_cont div {
+  align-items: center;
+}
+
+#myclass_view .myclass_cont .myclass_desc {
+  font-size: var(--t-size3);
+  line-height: 20px;
+}
+
+

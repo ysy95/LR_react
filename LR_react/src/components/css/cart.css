@@ -1,0 +1,314 @@
+
+.c_title{
+  text-align: center;
+  font-size: 24px;
+  padding: 50px;
+  font-weight: bold;
+}
+
+.classlist{
+  padding: 18px;
+  box-sizing: border-box;
+  height: 180px;
+  background-color: #fff;
+  border-radius: var(--b-radius1);
+  display: flex;
+  justify-content: space-around;
+}
+.c_txt{
+  color: #000;
+  margin-left: var(--b-margin1);
+  line-height: 20px;
+}
+
+.c_title2{
+  font-size: var(--t-size1);
+  font-weight: bold;
+  color: var(--t-color1);
+  margin-top: var(--b-margin2);
+}
+.class_level{
+  color: var(--t-color2);
+  font-weight: bold;
+  margin:var(--b-margin2) 0px;
+}
+.c_price{
+  text-align: right;
+  font-size: var(--t-size1);
+  font-weight: bold;
+}
+
+input[type="checkbox"] + label{
+  line-height: 30px;
+  color: #555;
+}
+input[type="checkbox"]{
+  transform: translateX(-10px);
+  border-radius: 50%;
+  appearance: none;
+  background: #d9d9d9;
+  width: 20px;height: 20px;
+  accent-color: var(--bg-color1);
+  cursor: pointer;
+  transition: 0.3;
+} 
+input[type="checkbox"]:checked::after {
+  display: inline-block;
+  content: '√';
+  width: 20px;height: 20px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50%;
+  background: var(--bg-color1);
+  color: #fff;
+  
+}
+
+/* 결제상품 서식 */
+
+.payment_con p{
+  margin-bottom: var(--b-margin1);
+}
+.payment_con p > span{
+  float: right;
+  font-weight: bold;
+  font-size: var(--t-size1);
+}
+.payment_con{
+  background-color: #fff;
+  color: var(--t-color1);
+  margin-top: 30px;
+  border-radius: var(--b-radius1);
+  padding: 30px 15px;
+}
+.p_title{
+  font-weight: bold;
+  font-size: var(--t-size1);
+  margin: 0px 0px var(--b-margin1) 0px;
+}
+.p_price{
+  padding-bottom: var(--b-margin1);
+  border-bottom: solid 1px #acacac;
+}
+#payment_btn{
+  display: block;
+  width:330px;
+  height: 50px;
+  border-radius: var(--b-radius1);
+  border: none;
+  background-color: var(--bg-color1);
+  color: var(--t-color3);
+  font-size: var(--t-size1);
+  margin:var(--b-margin1) 0px;
+}
+.txt_tag{
+  padding-left: 34%;
+  color: var(--t-color1);
+}
+
+
+/* 구매내역 */
+
+.payment_t {
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 50px 0px 30px 0px;
+  font-weight: bold;
+}
+
+.payment_list, .payment_com {
+  background-color: #fff;
+  border-radius: var(--b-radius1);
+}
+.payment_list{
+  margin-bottom: var(--b-margin3);
+}
+.payment_list caption{display: none;}
+.payment_list table{
+  color: var(--t-color1);
+  margin: var(--b-margin3) auto;
+  text-align: center;
+}
+
+.payment_list table thead th {
+  padding: 15px 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--t-size3);
+}
+
+.payment_list table tbody td {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.payment_list table tbody td:nth-child(odd) {
+  color: var(--bg-color1);
+}
+
+.payment_com h3{
+  color: var(--t-color2);
+  font-weight: bold;
+}
+
+.payment_com{
+  margin-bottom: var(--b-margin1);
+  color: var(--t-color1);
+  text-indent: 15px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.payment_com:last-child {
+  margin-bottom: 50px;
+}
+
+
+.payment_com div:first-child {
+  width: 100%;
+  padding: 5px 0px;
+  justify-content: space-between;
+  border-bottom: solid 1px #d6d6d6;
+}
+
+.payment_com div:nth-child(2) {
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  font-size: var(--t-size3);
+
+}
+
+.payment_com a svg {
+  color: var(--bg-color4);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.payment_com div:nth-child(2) p {
+  padding: 10px 0px 5px 0px;
+  font-weight: bold;
+}
+
+.payment_com a {
+  position: relative;
+  padding-right: 20px;
+}
+
+.payment_com a, .payment_com span{
+  color: var(--t-color1);
+  font-size: var(--t-size3);
+}
+
+.payment_com p:last-child {
+  text-align: right;
+  padding-right: 10px;
+  font-size: var(--t-size3);
+  padding-bottom: 15px;
+  color: var(--bg-color2);
+  font-weight: bold;
+}
+
+/* 찜한 강의 */ 
+
+.likes_list h2 {
+    margin-bottom: 20px; 
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+    font-weight: bold;
+}
+
+.likes_list .mylikes {
+  border-radius: 8px;
+  width: 100%;
+  background: #fff;
+  color: var(--t-color1);
+  height: 160px;
+}
+
+.likes_list .mylikes ul {
+  padding: 15px 0px 15px 15px;
+}
+
+.likes_list .mylikes ul li {
+  padding-right: 15px;
+  position: relative;
+  color: var(--bg-color2);
+}
+
+.likes_list .mylikes ul li::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  right: 7px;
+  background: var(--bg-color2);
+}
+
+.likes_list .mylikes ul li:last-child:after {
+  display: none;
+}
+
+.likes_list .mylikes img {
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+  display: block;
+  margin-bottom: var(--b-margin1);
+}
+
+.likes_list .mylikes:last-child {
+  margin-bottom: 50px;
+}
+
+.likes_list .class_info {
+  justify-content: space-between;
+}
+
+.likes_list .class_info .class_infod {
+  width: 80%;
+  padding-left: 15px;
+}
+
+.likes_list .class_info .class_infod p {
+  font-weight: bold;
+}
+
+.likes_list .class_info .class_infod p:first-child {
+ font-size: var(--t-size1); 
+ margin-bottom: 10px;
+}
+
+.likes_list div:first-child {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes_list div:first-child svg {
+  display: block;
+  margin-right: 15px;
+  height: 20px;
+  width: 24px;
+  color: var(--bg-color1);
+}
+
+.likes_list .class_infod svg {
+  height: 20px;
+  width: 24px;
+  padding-right: 5px;
+}
+
+
+.likes_list .class_infod p:last-child {
+  color: var(--bg-color4);
+  margin-top: 10px;
+  align-items: center;
+  font-size: var(--t-size3);
+}
