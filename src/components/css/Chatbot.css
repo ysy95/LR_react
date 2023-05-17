@@ -25,7 +25,7 @@
   width:70%;
   box-shadow: 0 0 0 3px var(--bg-color1) inset;
   border-radius: var(--b-radius1);
-  margin-bottom:10px;
+  margin-bottom:20px;
   padding:10px;
 }
 .bubble:nth-child(2n){

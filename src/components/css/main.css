@@ -3,13 +3,25 @@
 body{
   overflow-x: hidden;
 }
-h2{
+.event_tit>h2{
   text-align: center;
   color: var(--t-color2);
   font-weight: bold;
   margin:40px 0px 15px 0px;
 }
-p{
+.con_wrap>h2{
+  text-align: center;
+  color: var(--t-color2);
+  font-weight: bold;
+  margin:40px 0px 15px 0px;
+}
+.ins_wrap>h2{
+  text-align: center;
+  color: var(--t-color2);
+  font-weight: bold;
+  margin:40px 0px 15px 0px;
+}
+.ins_wrap > p{
   text-align: center;
   color:rgba(255,255,255,60%);
 }
@@ -123,7 +135,12 @@ video{
 
 }
 .event_tit>p{
+  text-align: center;
   margin: 0px 0px 15px 0px;
+  color:rgba(255,255,255,60%)
+}
+.event_tit>h2>a{
+  color: #f77f00;
 }
 .white_hi{
   width: 100%;
