@@ -3,13 +3,14 @@ import '../../css/mypage.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-function MypageQnaView(props) {
+function MypageQnaView({qnalist, setQnalist}) {
+  console.log(qnalist);
   return (
     // php
     <div className='qnaview_wrap'>
       <form name='qna'>
       <label htmlFor="qna_view">
-      <p>Q. 남병규는 앞으로 몇번의 제모를?
+      <p>{qnalist.title}
       <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon></p>
       </label>
       <input type="checkbox" name="qna" id="qna_view" className='hidden'/>

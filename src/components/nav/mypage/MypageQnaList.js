@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
-function MypageQnaList(props) {
+function MypageQnaList({qnalist, setQnalist}) {
+  console.log(qnalist);
   return (
     <div>
       <section id='qna_list'>
@@ -17,7 +18,7 @@ function MypageQnaList(props) {
         <FontAwesomeIcon icon={faAngleRight} />
         </Link>
         </div>
-        <MypageQnaView />
+        <MypageQnaView qnalist={qnalist} setQnalist={setQnalist}/>
         </article>
       </section>
     </div>

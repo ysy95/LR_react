@@ -15,8 +15,8 @@ import MypageQnaWrite from './mypage/MypageQnaWrite';
 
 import '../css/cart.css'
 
-function Mypage({setUserInfo, userInfo}) {
-  
+function Mypage({setUserInfo, userInfo, qnalist, setQnalist}) {
+  console.log(qnalist);
   return (
   <div>
     <MypageClass userInfo={userInfo} />
@@ -25,7 +25,7 @@ function Mypage({setUserInfo, userInfo}) {
     <Route path='/mylikes' element={<MypageLikeslist userInfo={userInfo} />} />
     <Route path='/myclasslist' element={<MypageClassList userInfo={userInfo} />} />
     <Route path='/receipt' element={<MypageReceipt userInfo={userInfo} />} />
-    <Route path='/qna' element={<MypageQnaList userInfo={userInfo} />} />
+    <Route path='/qna' element={<MypageQnaList userInfo={userInfo} qnalist={qnalist} setQnalist={setQnalist} />} />
     <Route path='/qnawrite' element={<MypageQnaWrite userInfo={userInfo} />} />
 
     </Routes>

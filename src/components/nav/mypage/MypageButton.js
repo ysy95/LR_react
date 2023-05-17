@@ -1,10 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function MypageButton(props) {
+  const navigate = useNavigate();
+  const Logout = (e) => {
+    e.preventDefault();
+    window.localStorage.removeItem('loginInfo');
+    navigate('/');
+  }
   // const mybtn = [
   //   {
   //     id:1,
@@ -44,6 +50,9 @@ function MypageButton(props) {
     <Link to='/mypage/qna'className='my_btn'>1:1문의
     <FontAwesomeIcon icon={faPlus} className='plus_icon'></FontAwesomeIcon>
     </Link>
+    <button onClick={Logout} className='my_btn'>
+      로그아웃하기
+    </button>
     </>
   );
 }

@@ -1,8 +1,9 @@
 import React, {useState } from 'react';
-import {Link } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 function Login({setLoginInfo, loginInfo}) {
+  const navigate = useNavigate();
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
   // let navigate = useNavigate();
@@ -34,7 +35,7 @@ const LoginForm = (e) => {
     const email = response.data.email;
     const users = JSON.stringify({"id": id, "profile" : profile, "name" : name, "phone":phone, "email" : email })
     localStorage.setItem("loginInfo", users);
-    console.log(users); 
+    navigate('/');
   } else {
     alert('비밀번호가 틀렸습니다. 다시 로그인해주세요.');
   }
